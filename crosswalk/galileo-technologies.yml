@@ -8,10 +8,14 @@ concepts:
     - traces
     - spans
     properties:
-      id: id
       trace_id: trace_id
       name: name
-    core_coverage: 0.0
+      parent_span_id: parent_id
+      id: id
+      span_id: span_id
+      duration: duration_ns
+      tags: tags
+    core_coverage: 0.667
     evidence:
     - openapi/_original/galileo-technologies-openapi.json#GET /projects/{project_id}/spans/{span_id}
     - openapi/_original/galileo-technologies-openapi.json#GET /projects/{project_id}/traces/{trace_id}

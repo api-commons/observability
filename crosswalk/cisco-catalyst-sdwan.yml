@@ -33,7 +33,11 @@ concepts:
   trace:
     path_segment:
     - traces
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      trace_id: trace-id
+      id: uuid
+      status: state
+      duration: duration
+    core_coverage: 0.333
     evidence:
     - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /stream/device/nwpi/tasks/{taskId}/traces

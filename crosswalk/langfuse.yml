@@ -7,10 +7,19 @@ concepts:
     path_segment:
     - traces
     properties:
-      id: id
+      trace_id: traceId
       name: name
-      metadata: metadata
-    core_coverage: 0.0
+      metadata:
+      - attributes
+      - metadata
+      parent_span_id: parentSpanId
+      id: id
+      span_id: spanId
+      kind: kind
+      status: status
+      start_time_unix_nano: startTimeUnixNano
+      tags: tags
+    core_coverage: 1.0
     evidence:
     - openapi/_original/langfuse-openapi.yml#DELETE /api/public/traces
     - openapi/_original/langfuse-openapi.yml#DELETE /api/public/traces/{traceId}

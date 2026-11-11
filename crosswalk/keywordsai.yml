@@ -10,7 +10,8 @@ concepts:
       trace_id: trace_id
       name: name
       start_time: start_time
-    core_coverage: 0.0
+      end_time: end_time
+    core_coverage: 0.667
     evidence:
     - openapi/_original/keywordsai-openapi.yml#DELETE /traces/{trace_id}/
     - openapi/_original/keywordsai-openapi.yml#GET /traces/{trace_id}/

@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - monitors
     properties:
-      name: name
       id: id
+      name: name
       status: status
       tags: labels
     core_coverage: 0.75
@@ -21,8 +21,12 @@ concepts:
   alert:
     path_segment:
     - alerts
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      status: state
+      monitor_id: source
+      severity: severity
+    core_coverage: 0.667
     evidence:
     - openapi/_original/kentik-alerting-openapi.json#GET /v202505/alerts/{id}
     - openapi/_original/kentik-alerting-openapi.json#POST /v202505/alerts
@@ -32,6 +36,7 @@ concepts:
     properties:
       id: id
       start_time: startTime
+      end_time: endTime
     core_coverage: 0.0
     evidence:
     - openapi/_original/kentik-synthetics-openapi.json#POST /synthetics/v202309/trace

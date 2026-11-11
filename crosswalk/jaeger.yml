@@ -8,7 +8,11 @@ concepts:
     - traces
     properties:
       trace_id: traceID
-    core_coverage: 0.0
+      span_id: spanID
+      start_time: startTime
+      duration: duration
+      tags: tags
+    core_coverage: 0.333
     evidence:
     - openapi/_original/jaeger-query-api.yml#GET /api/traces
     - openapi/_original/jaeger-query-api.yml#GET /api/traces/{traceID}

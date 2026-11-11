@@ -6,7 +6,11 @@ concepts:
   log:
     path_segment:
     - logs
-    properties: {}
+    properties:
+      timestamp: ts
+      id: id
+      status: status
+      metadata: attributes
     core_coverage: 0.0
     evidence:
     - openapi/_original/graphiant-portal-openapi-original.json#POST /v1/activity/logs

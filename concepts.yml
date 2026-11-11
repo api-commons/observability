@@ -96,8 +96,8 @@ findings:
     monitors share the identity of a watcher even where their thresholds differ."
   - "An SLO agrees almost completely -- name, description, its indicator, tags and dates -- the
     newest concept here and the most standardised."
-  - "Logs and traces agree on nothing as resources: several are OpenTelemetry payloads (resource
-    spans, log records) whose shape lives in the OTLP standard, and others are
+  - "Traces agree on a trace id, a name and metadata; logs agree on nothing as a resource.
+    Several are OpenTelemetry payloads whose shape lives in the OTLP standard, and others
     LLM-observability traces with a different shape again. OTLP deserves its own pass, as
     Open Banking did."
 decisions:

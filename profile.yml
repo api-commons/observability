@@ -82,6 +82,18 @@ concepts:
       share: 0.068
       tier: long-tail
     properties:
+    - name: id
+      tier: core
+      providers: 32
+      share: 0.727
+      type: string
+      spellings:
+      - id
+      - monitorId
+      - monitor_id
+      - checkId
+      - uuid
+      - check_id
     - name: name
       tier: core
       providers: 31
@@ -91,21 +103,10 @@ concepts:
       - name
       - label
       - display_name
-    - name: id
-      tier: core
-      providers: 29
-      share: 0.659
-      type: string
-      spellings:
-      - id
-      - monitor_id
-      - checkId
-      - uuid
-      - monitorId
     - name: status
       tier: core
-      providers: 24
-      share: 0.545
+      providers: 25
+      share: 0.568
       type: boolean
       spellings:
       - status
@@ -127,12 +128,12 @@ concepts:
       - check_type
     - name: created_at
       tier: extended
-      providers: 20
-      share: 0.455
+      providers: 21
+      share: 0.477
       type: string
       spellings:
-      - createdAt
       - created_at
+      - createdAt
       - created
       - create_time
       - dateCreated
@@ -177,21 +178,21 @@ concepts:
       - period
       - Period
       - intervalSeconds
-    long_tail_count: 436
+    long_tail_count: 442
     long_tail_sample:
     - thresholds
     - timeout
     - metadata
+    - query
     - regions
     - schedule
     - slug
+    - created_by
     - locations
     - notify
     - port
-    - query
     - request
     - config
-    - created_by
     - deleted
     - disabled
     - params
@@ -263,22 +264,30 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 11
-      share: 0.786
+      providers: 12
+      share: 0.857
       type: string
       spellings:
       - id
       - alertId
     - name: status
       tier: core
-      providers: 8
-      share: 0.571
+      providers: 9
+      share: 0.643
       type: string
       spellings:
       - status
+      - state
       - active
       - Enabled
-      - state
+    - name: name
+      tier: core
+      providers: 7
+      share: 0.5
+      type: string
+      spellings:
+      - name
+      - title
     - name: created_at
       tier: extended
       providers: 6
@@ -288,22 +297,6 @@ concepts:
       - createdAt
       - created_at
       - dateCreated
-    - name: name
-      tier: extended
-      providers: 6
-      share: 0.429
-      type: string
-      spellings:
-      - name
-      - title
-    - name: description
-      tier: extended
-      providers: 4
-      share: 0.286
-      type: string
-      spellings:
-      - description
-      - details
     - name: updated_at
       tier: extended
       providers: 4
@@ -313,17 +306,43 @@ concepts:
       - updated_at
       - updatedAt
       - dateModified
-    long_tail_count: 126
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: string
+      spellings:
+      - description
+    - name: monitor_id
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: object
+      spellings:
+      - source
+      - monitor
+      - ruleId
+    - name: severity
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: string
+      spellings:
+      - severity
+      - level
+    long_tail_count: 131
     long_tail_sample:
     - alert_type
     - attached_at
+    - end
     - entity_type
     - filters
     - index
-    - monitor_id
-    - severity
+    - start
     - timestamp
     - totals
+    - type
+    - acknowledgement
     - action
     - action_params
     - agents
@@ -353,8 +372,6 @@ concepts:
     - date_start
     - deleted
     - deleted_alert_id
-    - detected_end
-    - detected_start
   dashboard:
     segments_seen:
       dashboards: 13
@@ -428,16 +445,6 @@ concepts:
       - updatedAt
       - update_time
       - modifiedDate
-    - name: widgets
-      tier: extended
-      providers: 5
-      share: 0.385
-      type: array
-      spellings:
-      - layout
-      - widgets
-      - charts
-      - panels
     - name: created_by
       tier: extended
       providers: 4
@@ -454,7 +461,17 @@ concepts:
       spellings:
       - labels
       - tags
-    long_tail_count: 101
+    - name: widgets
+      tier: extended
+      providers: 4
+      share: 0.308
+      type: array
+      spellings:
+      - layout
+      - widgets
+      - charts
+      - panels
+    long_tail_count: 103
     long_tail_sample:
     - collection
     - collection_slug
@@ -493,9 +510,9 @@ concepts:
     - enable_incidents
     - expand_checks
     - favicon
+    - fields
     - folder_id
     - global_filter_id
-    - global_override
   log:
     segments_seen:
       logs: 39
@@ -537,42 +554,32 @@ concepts:
       share: 0.021
       tier: long-tail
     properties:
+    - name: timestamp
+      tier: extended
+      providers: 14
+      share: 0.378
+      type: string
+      spellings:
+      - timestamp
+      - time
+      - occurredAt
+      - ts
+      - timestampMs
     - name: id
       tier: extended
-      providers: 11
-      share: 0.297
+      providers: 13
+      share: 0.351
       type: string
       spellings:
       - id
       - _id
       - ID
       - ObjectID
-      - uuid
-    - name: created_at
-      tier: extended
-      providers: 10
-      share: 0.27
-      type: string
-      spellings:
-      - created_at
-      - createdAt
-      - created
-      - Created
-      - createdDate
-    - name: timestamp
-      tier: extended
-      providers: 10
-      share: 0.27
-      type: string
-      spellings:
-      - timestamp
-      - time
-      - occurredAt
-      - timestampMs
+      - logId
     - name: level
       tier: extended
-      providers: 9
-      share: 0.243
+      providers: 11
+      share: 0.297
       type: string
       spellings:
       - level
@@ -581,55 +588,84 @@ concepts:
       - Level
     - name: status
       tier: extended
-      providers: 9
-      share: 0.243
+      providers: 11
+      share: 0.297
       type: string
       spellings:
       - status
       - enabled
       - state
-    long_tail_count: 203
+    - name: created_at
+      tier: extended
+      providers: 9
+      share: 0.243
+      type: string
+      spellings:
+      - created_at
+      - created
+      - createdAt
+      - Created
+      - createdDate
+    - name: metadata
+      tier: extended
+      providers: 9
+      share: 0.243
+      type: array
+      spellings:
+      - attributes
+      - metadata
+    - name: message
+      tier: extended
+      providers: 8
+      share: 0.216
+      type: string
+      spellings:
+      - body
+      - line
+      - text
+      - msg
+    long_tail_count: 224
     long_tail_sample:
-    - message
-    - metadata
-    - source
-    - updated_at
-    - query
-    - type
     - action
-    - description
+    - source
+    - type
+    - query
+    - severity_number
+    - span_id
+    - trace_id
+    - updated_at
+    - user_id
+    - name
+    - observed_time_unix_nano
     - offset
+    - severity_text
+    - time_unix_nano
     - bytes_sent
+    - comment
+    - description
+    - dropped_attributes_count
     - fields
     - filename
+    - flags
     - limit
-    - output
     - partial_success
     - path
     - request
-    - resource
     - response
+    - rule_id
     - run_id
-    - schema_url
-    - scope_logs
-    - size
     - stream
+    - targets
     - thread_id
-    - user_id
+    - user
     - user_name
     - acknowledgement_timeout
     - action_type
     - activity
+    - activity_id
     - add_to_annotation_queue
     - add_to_dataset
     - additional_info
-    - address
-    - agent
-    - agent_log_item_type
-    - agent_name
-    - agent_pool_id
-    - agent_registration_uid
-    - agent_uid
   metric:
     segments_seen:
       metrics: 8
@@ -659,6 +695,14 @@ concepts:
       share: 0.1
       tier: long-tail
     properties:
+    - name: metric
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - metric
+      - name
     - name: type
       tier: core
       providers: 5
@@ -666,14 +710,6 @@ concepts:
       type: string
       spellings:
       - type
-    - name: metric
-      tier: extended
-      providers: 4
-      share: 0.444
-      type: string
-      spellings:
-      - name
-      - metric
     - name: description
       tier: extended
       providers: 3
@@ -695,48 +731,48 @@ concepts:
       type: string
       spellings:
       - unit
-    long_tail_count: 96
+    long_tail_count: 111
     long_tail_sample:
     - end_date
     - filters
     - from
     - host
     - id
+    - interval
     - metadata
     - name
     - query
     - rollup
     - start_date
     - tags
+    - actions
     - added_count
     - added_metric_ids
     - adjusted_timeframe
     - agent_ids
+    - agent_model_credits
+    - agent_tasks
     - aggregate
     - aggregated
+    - aggregation
     - aggregations
+    - application_id
+    - application_ids
     - beacon_types
-    - bucket_granularity
     - cardinality
     - category
     - children
     - columns
     - config_id
     - correlation_tags
+    - credits
     - cross_series_aggregations
     - current_period
-    - custom_tags
     - dataset
     - default_aggregation
     - disable_default_groups
     - empty
     - entities
-    - evaluate_conversations
-    - evaluation_count
-    - evaluation_triggered
-    - exclude_origins
-    - format
-    - formatter
   trace:
     segments_seen:
       traces: 38
@@ -778,6 +814,42 @@ concepts:
       share: 0.02
       tier: long-tail
     properties:
+    - name: trace_id
+      tier: core
+      providers: 26
+      share: 0.619
+      type: string
+      spellings:
+      - traceId
+      - trace_id
+      - trace-id
+      - traceID
+    - name: name
+      tier: core
+      providers: 22
+      share: 0.524
+      type: string
+      spellings:
+      - name
+      - label
+    - name: metadata
+      tier: core
+      providers: 21
+      share: 0.5
+      type: object
+      spellings:
+      - attributes
+      - metadata
+    - name: parent_span_id
+      tier: extended
+      providers: 19
+      share: 0.452
+      type: string
+      spellings:
+      - parentSpanId
+      - parentId
+      - parent_id
+      - parent_span_id
     - name: id
       tier: extended
       providers: 17
@@ -786,81 +858,115 @@ concepts:
       spellings:
       - id
       - Id
-    - name: trace_id
+      - uuid
+    - name: span_id
       tier: extended
-      providers: 17
-      share: 0.405
+      providers: 15
+      share: 0.357
       type: string
       spellings:
-      - trace_id
-      - traceId
-      - traceID
-    - name: name
+      - spanId
+      - span_id
+      - spanID
+    - name: kind
       tier: extended
       providers: 14
       share: 0.333
       type: string
       spellings:
-      - name
-      - label
-    - name: metadata
+      - kind
+    - name: start_time
+      tier: extended
+      providers: 14
+      share: 0.333
+      type: string
+      spellings:
+      - start_time
+      - startTime
+    - name: status
+      tier: extended
+      providers: 14
+      share: 0.333
+      type: object
+      spellings:
+      - status
+      - state
+    - name: duration
       tier: extended
       providers: 12
       share: 0.286
-      type: object
+      type: integer
       spellings:
-      - metadata
-      - attributes
-    - name: start_time
+      - duration
+      - duration_ms
+      - duration_ns
+      - durationNs
+    - name: end_time
+      tier: extended
+      providers: 11
+      share: 0.262
+      type: string
+      spellings:
+      - end_time
+      - endTime
+    - name: start_time_unix_nano
       tier: extended
       providers: 9
       share: 0.214
       type: string
       spellings:
-      - start_time
-      - startTime
-    long_tail_count: 285
+      - startTimeUnixNano
+      - start_time_unix_nano
+    - name: tags
+      tier: extended
+      providers: 9
+      share: 0.214
+      type: array
+      spellings:
+      - tags
+      - labels
+    long_tail_count: 301
     long_tail_sample:
-    - end_time
-    - parent_span_id
+    - end_time_unix_nano
+    - events
     - project_id
-    - duration
-    - resource_spans
     - service
-    - tags
     - input
     - output
     - partial_success
     - session_id
     - created_at
-    - kind
-    - metrics
+    - flags
     - started_at
     - thread_id
     - timestamp
     - trace_ids
     - annotations
+    - dropped_attributes_count
+    - dropped_events_count
+    - dropped_links_count
     - environment
+    - metrics
     - op
+    - operation_name
     - project_name
-    - schema_url
-    - scope_spans
-    - span_id
-    - status
+    - trace_state
     - updated_at
     - user_id
+    - version
     - agent_name
-    - batches
+    - context
     - debug
-    - description
     - endpoint
     - error_code
     - error_count
-    - events
+    - has_children
+    - is_complete
     - latency
     - local_endpoint
+    - logs
     - order
-    - page_size
+    - pagination
   slo:
     segments_seen:
       slos: 5

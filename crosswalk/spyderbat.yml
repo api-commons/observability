@@ -8,6 +8,7 @@ concepts:
     - log
     properties:
       timestamp: time
+      message: msg
     core_coverage: 0.0
     evidence:
     - openapi/_original/spyderbat-openapi-original.json#GET /api/v1/org/{orgUID}/agent_registration/{uid}/log
@@ -17,7 +18,7 @@ concepts:
     - trace
     properties:
       name: name
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/spyderbat-openapi-original.json#POST /api/v1/org/{orgUID}/suppress/trace
     - openapi/_original/spyderbat-openapi.json#POST /api/v1/org/{orgUID}/suppress/trace

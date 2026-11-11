@@ -9,7 +9,11 @@ concepts:
     properties:
       name: name
       metadata: attributes
+      parent_span_id: parent_span_id
+      span_id: span_id
+      kind: kind
       start_time: start_time
-    core_coverage: 0.0
+      end_time: end_time
+    core_coverage: 0.667
     evidence:
     - openapi/_original/waxell-observe-openapi.yml#POST /api/v1/observe/runs/{run_id}/spans/

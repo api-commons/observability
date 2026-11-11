@@ -7,7 +7,10 @@ concepts:
     path_segment:
     - logs
     properties:
+      timestamp: timestamp
+      level: severity
       status: status
+      message: line
     core_coverage: 0.0
     evidence:
     - openapi/_original/kubeshop-testkube-agent-openapi-original.yml#GET /executions/{id}/logs

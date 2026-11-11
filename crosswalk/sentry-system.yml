@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - monitors
     properties:
-      name: name
       id: id
+      name: name
       status: status
       type: type
       created_at: dateCreated
@@ -27,8 +27,8 @@ concepts:
     properties:
       id: id
       status: status
-      created_at: dateCreated
       name: name
+      created_at: dateCreated
       updated_at: dateModified
     core_coverage: 1.0
     evidence:
@@ -41,10 +41,11 @@ concepts:
     path_segment:
     - dashboards
     properties:
-      name: title
+      name:
+      - title
+      - name
       id: id
       created_at: dateCreated
-      widgets: widgets
       created_by: createdBy
     core_coverage: 0.75
     evidence:

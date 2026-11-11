@@ -8,8 +8,8 @@ concepts:
     - monitors
     - monitor
     properties:
-      name: name
       id: id
+      name: name
       created_at: createdAt
       updated_at: updatedAt
       description: description
@@ -27,7 +27,10 @@ concepts:
       trace_id: traceId
       metadata: metadata
       start_time: startTime
-    core_coverage: 0.0
+      duration: durationNs
+      end_time: endTime
+      tags: tags
+    core_coverage: 0.667
     evidence:
     - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/searches/{searchSlug}/traces
     - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/sessions/{sessionId}/traces

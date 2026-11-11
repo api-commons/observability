@@ -6,11 +6,7 @@ concepts:
   log:
     path_segment:
     - log
-    properties:
-      id:
-      - id
-      - uuid
-      created_at: createdAt
+    properties: {}
     core_coverage: 0.0
     evidence:
     - openapi/_original/stack-moxie-openapi.json#GET /v1/organizations/{org}/scenarios/{scenarioId}/runs/{runId}/log/{id}

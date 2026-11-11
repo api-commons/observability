@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - monitor
     properties:
-      name: name
       id: id
+      name: name
       status: active
       description: description
     core_coverage: 0.75

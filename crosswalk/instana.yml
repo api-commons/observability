@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - synthetics
     properties:
-      name: name
       id: id
+      name: name
       status: enabled
       created_at: created
       description: description
@@ -24,7 +24,7 @@ concepts:
     - alerts
     properties:
       id: id
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/instana-openapi.yml#DELETE /api/events/settings/alerts/{id}
     - openapi/_original/instana-openapi.yml#GET /api/events/settings/alerts
@@ -35,9 +35,9 @@ concepts:
     - logs
     properties:
       id: id
-      created_at: created
       level: severity
       status: enabled
+      created_at: created
     core_coverage: 0.0
     evidence:
     - openapi/_original/instana-openapi.yml#DELETE /api/events/settings/global-alert-configs/logs/{id}
@@ -49,6 +49,7 @@ concepts:
     path_segment:
     - metrics
     properties:
+      metric: metric
       type: type
       description: description
       metrics: metrics
@@ -63,12 +64,14 @@ concepts:
     path_segment:
     - traces
     properties:
-      id: id
       name:
       - label
       - name
+      parent_span_id: parentId
+      id: id
       start_time: startTime
-    core_coverage: 0.0
+      duration: duration
+    core_coverage: 0.333
     evidence:
     - openapi/_original/instana-openapi.yml#GET /api/application-monitoring/v2/analyze/traces/{id}
     - openapi/_original/instana-openapi.yml#POST /api/application-monitoring/analyze/traces

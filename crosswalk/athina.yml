@@ -8,6 +8,7 @@ concepts:
     - logs
     properties:
       status: status
+      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/athina-openapi.yml#PUT /logs/{log_id}
@@ -15,11 +16,13 @@ concepts:
     path_segment:
     - trace
     properties:
-      id: id
       name: name
       metadata: attributes
+      id: id
       start_time: start_time
-    core_coverage: 0.0
+      status: status
+      end_time: end_time
+    core_coverage: 0.667
     evidence:
     - openapi/_original/athina-openapi.yml#GET /trace/{trace_id}
     - openapi/_original/athina-openapi.yml#POST /trace/

@@ -23,7 +23,8 @@ concepts:
       trace_id: trace_id
       name: name
       start_time: start_time
-    core_coverage: 0.0
+      end_time: end_time
+    core_coverage: 0.667
     evidence:
     - openapi/_original/langchain-openapi.json#GET /v2/threads/{thread_id}/traces
     - openapi/_original/langchain-openapi.json#POST /api/v1/runs/delete/traces

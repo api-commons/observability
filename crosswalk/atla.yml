@@ -7,9 +7,9 @@ concepts:
     path_segment:
     - traces
     properties:
-      id: id
       metadata: metadata
-    core_coverage: 0.0
+      id: id
+    core_coverage: 0.333
     evidence:
     - openapi/_original/atla-insights-openapi.yaml#GET /api/sdk/v1/traces
     - openapi/_original/atla-insights-openapi.yaml#GET /api/sdk/v1/traces/{traceId}

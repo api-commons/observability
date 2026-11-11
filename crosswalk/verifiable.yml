@@ -21,7 +21,7 @@ concepts:
     - alerts
     properties:
       id: id
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/verifiable-openapi-deprecated.json#GET /alerts
     - openapi/_original/verifiable-openapi-deprecated.json#GET /alerts/{alertId}

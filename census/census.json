@@ -249,8 +249,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "monitors": "array",
      "slug": "string",
      "name": "string",
      "created_at": "string",
@@ -390,8 +388,6 @@
      "PUT item"
     ],
     "properties": {
-     "monitors": "array",
-     "page": "object",
      "annotations": "object",
      "bucket_slug": "string",
      "collection": null,
@@ -464,9 +460,6 @@
      "POST collection"
     ],
     "properties": {
-     "monitors": "array",
-     "next_page_token": "string",
-     "total_count": "integer",
      "ulid": "string",
      "name": "string",
      "description": "string",
@@ -507,11 +500,6 @@
      "PUT collection"
     ],
     "properties": {
-     "monitors": "array",
-     "page": "integer",
-     "page_size": "integer",
-     "total_monitor_count": "integer",
-     "version": "string",
      "attributes": "object",
      "assertions": "array",
      "created": "string",
@@ -551,7 +539,8 @@
      "defaultNote": "string",
      "tolerated_failures": "integer",
      "deleted_count": "integer",
-     "requested_count": "integer"
+     "requested_count": "integer",
+     "monitors": "array"
     },
     "evidence": [
      "openapi/_original/cronitor-openapi.json#DELETE /api/monitors",
@@ -610,7 +599,9 @@
      "PUT item"
     ],
     "properties": {
-     "warnings": "array",
+     "message": "string",
+     "monitorId": "string",
+     "publicLocationIds": "array",
      "alert": "object",
      "enabled": "boolean",
      "labels": "object",
@@ -824,8 +815,6 @@
      "PUT item"
     ],
     "properties": {
-     "monitors": "array",
-     "invalidCount": "integer",
      "id": "string",
      "name": "string",
      "status": "string",
@@ -856,7 +845,9 @@
      "PUT item"
     ],
     "properties": {
-     "warnings": "array",
+     "message": "string",
+     "monitorId": "string",
+     "publicLocationIds": "array",
      "alert": "object",
      "enabled": "boolean",
      "labels": "object",
@@ -1145,7 +1136,12 @@
      "customVariables": [
       "object",
       "null"
-     ]
+     ],
+     "actionId": "string",
+     "levels": "string",
+     "conditions": "object",
+     "sendEndNotifications": "boolean",
+     "sendRemindersInterval": "boolean"
     },
     "evidence": [
      "openapi/_original/observeinc-openapi-assembled.json#DELETE /v1/monitors/{id}",
@@ -1246,8 +1242,21 @@
      "GET collection"
     ],
     "properties": {
-     "checks": "array",
-     "total_count": "number"
+     "check_id": "string",
+     "created_by": "string",
+     "created_at": "string",
+     "status": "string",
+     "was_published": "boolean",
+     "version_id": [
+      "string",
+      "null"
+     ],
+     "draft_version_name": [
+      "string",
+      "null"
+     ],
+     "eval_batch_ids": "array",
+     "test_sets": "array"
     },
     "evidence": [
      "openapi/_original/relevance-ai-openapi.json#GET /evals/{resource_type}/{resource_id}/pre-publish/checks"
@@ -1433,8 +1442,6 @@
      "PUT item"
     ],
     "properties": {
-     "checks": "array",
-     "counts": "object",
      "id": "integer",
      "name": "string",
      "type": "string",
@@ -1963,7 +1970,32 @@
      "PATCH collection"
     ],
     "properties": {
-     "alerts": "array",
+     "id": "string",
+     "reportTime": "string",
+     "processingTimestamp": "string",
+     "startTime": "string",
+     "level": "integer",
+     "test": "object",
+     "testPath": "array",
+     "testPathStyled": "string",
+     "testUrl": "string",
+     "testSmartboardUrl": "string",
+     "testPerformanceUrl": "string",
+     "testStatisticalUrl": "string",
+     "testScatterplotUrl": "string",
+     "testRecordUrl": "string",
+     "testType": "integer",
+     "alertType": "integer",
+     "alertSubtype": "integer",
+     "triggerType": "integer",
+     "operationType": "integer",
+     "warningTrigger": "number",
+     "criticalTrigger": "number",
+     "durationInSecond": "integer",
+     "node": "object",
+     "acknowledgedBy": "object",
+     "labels": "array",
+     "alerts": "object",
      "hasMore": "boolean",
      "next": "string",
      "previous": "string",
@@ -1989,7 +2021,32 @@
      "PATCH collection"
     ],
     "properties": {
-     "alerts": "array",
+     "id": "string",
+     "reportTime": "string",
+     "processingTimestamp": "string",
+     "startTime": "string",
+     "level": "integer",
+     "test": "object",
+     "testPath": "array",
+     "testPathStyled": "string",
+     "testUrl": "string",
+     "testSmartboardUrl": "string",
+     "testPerformanceUrl": "string",
+     "testStatisticalUrl": "string",
+     "testScatterplotUrl": "string",
+     "testRecordUrl": "string",
+     "testType": "integer",
+     "alertType": "integer",
+     "alertSubtype": "integer",
+     "triggerType": "integer",
+     "operationType": "integer",
+     "warningTrigger": "number",
+     "criticalTrigger": "number",
+     "durationInSecond": "integer",
+     "node": "object",
+     "acknowledgedBy": "object",
+     "labels": "array",
+     "alerts": "object",
      "hasMore": "boolean",
      "next": "string",
      "previous": "string",
@@ -2013,8 +2070,15 @@
      "GET collection"
     ],
     "properties": {
-     "list": "array",
-     "pagination": "object"
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "severity": "string",
+     "status": "string",
+     "apiId": "string",
+     "componentId": "string",
+     "triggeredAt": "string",
+     "resolvedAt": "string"
     },
     "evidence": [
      "openapi/_original/choreo-insights-openapi.yml#GET /alerts"
@@ -2208,11 +2272,6 @@
      "PUT item"
     ],
     "properties": {
-     "starting_token": "integer",
-     "limit": "integer",
-     "paginated": "boolean",
-     "next_starting_token": null,
-     "alerts": "array",
      "conditions": "array",
      "filters": "array",
      "interval": "integer",
@@ -2278,8 +2337,12 @@
      "GET collection"
     ],
     "properties": {
-     "alerts": "array",
-     "nextPageToken": "string"
+     "name": "string",
+     "ruleName": "string",
+     "severity": "string",
+     "state": "string",
+     "createTime": "string",
+     "feedback": "string"
     },
     "evidence": [
      "openapi/_original/chronicle-api-openapi.yml#GET /projects/{projectId}/locations/{location}/instances/{instanceId}/alerts"
@@ -2490,8 +2553,6 @@
      "GET item"
     ],
     "properties": {
-     "alerts": "array",
-     "pagination_meta": "object",
      "alert_group_ids": "array",
      "alert_source_id": "string",
      "attributes": "array",
@@ -2606,8 +2667,20 @@
      "POST collection"
     ],
     "properties": {
+     "id": "string",
+     "source": "object",
+     "startTimeAt": "string",
+     "endTimeAt": "string",
+     "state": "string",
+     "severity": "string",
+     "highestSeverity": "string",
+     "acknowledgement": "object",
+     "eventStartTimeAt": "string",
+     "flow": "object",
+     "nms": "object",
+     "mitigationId": "string",
+     "externalContexts": "array",
      "pagination": "object",
-     "alerts": "array",
      "sorting": "object",
      "filters": "object",
      "alert": "object",
@@ -2707,8 +2780,12 @@
      "POST item"
     ],
     "properties": {
-     "actions": "array",
-     "rule": "object"
+     "alert_rule_id": "string",
+     "config": "object",
+     "created_at": "string",
+     "id": "string",
+     "target": "string",
+     "updated_at": "string"
     },
     "evidence": [
      "openapi/_original/langchain-openapi.json#POST /v1/platform/alerts/{session_id}"
@@ -3084,10 +3161,7 @@
      "aiChats": "array",
      "automaticInvestigation": null,
      "resolvedServiceBinding": null,
-     "stats": "object",
-     "alerts": "array",
-     "meta": "object",
-     "facets": "object"
+     "stats": "object"
     },
     "evidence": [
      "openapi/_original/observeinc-openapi-assembled.json#GET /v1/alerts",
@@ -3196,11 +3270,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "integer",
-     "size": "integer",
-     "total": "integer",
-     "content": "array",
-     "sortable_by": "array",
      "id": "string",
      "name": "string",
      "enabled": "boolean",
@@ -3208,11 +3277,11 @@
      "metadata": "object",
      "webhook": "object",
      "triggers": "array",
-     "project_id": "string",
      "created_at": "string",
      "created_by": "string",
      "last_updated_at": "string",
-     "last_updated_by": "string"
+     "last_updated_by": "string",
+     "project_id": "string"
     },
     "evidence": [
      "openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/alerts",
@@ -3335,8 +3404,6 @@
     "properties": {
      "limit": "integer",
      "next_cursor": "string",
-     "more": "boolean",
-     "triggers": "array",
      "type": "string",
      "trigger_type_name": "string",
      "trigger_type": "string",
@@ -3347,6 +3414,7 @@
      "is_subscribed_to_all_services": "boolean",
      "permissions": "object",
      "offset": "integer",
+     "more": "boolean",
      "total": "integer",
      "created_at": "string",
      "status": "string",
@@ -3554,8 +3622,14 @@
      "GET collection"
     ],
     "properties": {
-     "alerts": "array",
-     "count": "integer"
+     "id": "string",
+     "name": "string",
+     "severity": "string",
+     "status": "string",
+     "providerType": "string",
+     "sourceStatus": null,
+     "receivedAt": "string",
+     "event": "object"
     },
     "evidence": [
      "openapi/_original/runwhen-papi-openapi-original.json#GET /api/v1/workspaces/{workspace_name}/runsessions/{runsession_id}/alerts",
@@ -3647,11 +3721,15 @@
      "userPermissions": "object",
      "valueColumnName": "string",
      "valueName": "string",
-     "end": "string",
-     "notifications": "array",
-     "start": "string",
+     "backToNormal": "boolean",
+     "createTime": "string",
+     "sent": "boolean",
+     "text": "string",
+     "when": "string",
      "defaultInterval": "integer",
-     "interval": "string"
+     "end": "string",
+     "interval": "string",
+     "start": "string"
     },
     "evidence": [
      "openapi/_original/sematext-cloud-openapi-original.json#DELETE /users-web/api/v3/alerts/{updateableAlertId}",
@@ -3674,9 +3752,15 @@
      "GET item"
     ],
     "properties": {
-     "alertRule": "object",
-     "alerts": "array",
-     "mute": "object"
+     "active": "boolean",
+     "createState": "object",
+     "endTime": "string",
+     "id": "string",
+     "lastNotified": "string",
+     "lastState": "object",
+     "query": "string",
+     "ruleId": "string",
+     "startTime": "string"
     },
     "evidence": [
      "openapi/_original/sentio-openapi.yml#GET /v1/alerts/{ruleId}"
@@ -3878,8 +3962,10 @@
      "alertRuleId": "string",
      "alertState": "string",
      "alertSeverity": "string",
-     "details": "array",
-     "_embedded": "object"
+     "end": "object",
+     "name": "string",
+     "start": "object",
+     "type": "string"
     },
     "evidence": [
      "openapi/_original/thousandeyes-alerts-openapi-original.yml#GET /alerts",
@@ -3907,13 +3993,7 @@
      "flagged_content": "array",
      "flagged_page_links": "array",
      "flagged_people": "array",
-     "ui_portal_link": "object",
-     "alerts": "array",
-     "count": "integer",
-     "limit": "integer",
-     "offset": "integer",
-     "prev_alerts_link": "object",
-     "next_alerts_link": "object"
+     "ui_portal_link": "object"
     },
     "evidence": [
      "openapi/_original/truebiz-openapi-original.json#GET /api/v1/monitoring/alerts",
@@ -3950,8 +4030,6 @@
      "PUT item"
     ],
     "properties": {
-     "alerts": "array",
-     "count": "integer",
      "id": "integer",
      "projectId": "integer",
      "name": "string",
@@ -4168,8 +4246,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "dashboards": "array",
      "slug": "string",
      "name": "string",
      "created_at": "string",
@@ -4253,8 +4329,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "dashboards": "array",
      "slug": "string",
      "name": "string",
      "created_at": "string",
@@ -4318,8 +4392,6 @@
      "POST collection"
     ],
     "properties": {
-     "dashboards": "array",
-     "next_page_token": "string",
      "name": "string",
      "display_name": "string",
      "description": "string",
@@ -4478,8 +4550,6 @@
      "POST collection"
     ],
     "properties": {
-     "dashboards": "array",
-     "nextPageToken": "string",
      "name": "string",
      "displayName": "string",
      "gridLayout": "object",
@@ -4584,7 +4654,13 @@
      "queries": "array",
      "links": "object",
      "created_at": "string",
-     "updated_at": "string"
+     "updated_at": "string",
+     "query_id": "string",
+     "dataset": "string",
+     "query_annotation_id": "string",
+     "caption": "string",
+     "query_style": "string",
+     "graph_settings": "object"
     },
     "evidence": [
      "openapi/_original/honeycomb-api-openapi.yml#DELETE /1/boards/{boardId}",
@@ -5052,11 +5128,6 @@
      "POST collection"
     ],
     "properties": {
-     "content": "array",
-     "page": "integer",
-     "size": "integer",
-     "total": "integer",
-     "sortable_by": "array",
      "id": "string",
      "workspace_id": "string",
      "project_id": "string",
@@ -5169,8 +5240,6 @@
      "GET item"
     ],
     "properties": {
-     "dashboards": "array",
-     "permissions": "array",
      "createPanels": "array",
      "createdAt": "string",
      "default": "boolean",
@@ -5217,7 +5286,10 @@
      "dateCreated": "string",
      "createdBy": "object",
      "widgetDisplay": "array",
-     "widgets": "array"
+     "name": "string",
+     "fields": "array",
+     "conditions": "string",
+     "orderby": "string"
     },
     "evidence": [
      "openapi/_original/sentry-dashboards-openapi.yml#DELETE /organizations/{organization_id_or_slug}/dashboards/{dashboard_id}/",
@@ -5256,9 +5328,16 @@
      "GET collection"
     ],
     "properties": {
-     "lookupStatus": "string",
-     "boards": "array",
-     "page": "object"
+     "id": "string",
+     "name": "string",
+     "url": "string",
+     "description": "string",
+     "pinCount": "integer",
+     "followerCount": "integer",
+     "coverImageUrl": "string",
+     "createdAt": "string",
+     "privacy": "string",
+     "owner": "object"
     },
     "evidence": [
      "openapi/_original/social-fetch-openapi.json#GET /v1/pinterest/profiles/{handle}/boards"
@@ -5322,8 +5401,6 @@
      "PUT item"
     ],
     "properties": {
-     "dashboards": "array",
-     "next": "string",
      "title": "string",
      "description": "string",
      "folderId": "string",
@@ -5366,10 +5443,8 @@
     "properties": {
      "id": "integer",
      "name": "string",
-     "description": "string",
-     "shared": "boolean",
-     "sharingSettings": "array",
-     "panels": "array"
+     "type": "string",
+     "metrics": "array"
     },
     "evidence": [
      "openapi/_original/sysdig-monitor-openapi.yml#DELETE /api/v3/dashboards/{dashboardId}",
@@ -5715,11 +5790,21 @@
      "POST collection"
     ],
     "properties": {
-     "executionTime": "string",
-     "timeRange": "object",
-     "cursors": "object",
-     "resourceLogs": "array",
+     "id": "string",
+     "timeUnixNano": "string",
+     "observedTimeUnixNano": "string",
+     "eventName": "string",
+     "dash0EventId": "string",
+     "severityNumber": "integer",
+     "severityText": "string",
+     "body": "object",
+     "attributes": "array",
+     "droppedAttributesCount": "integer",
+     "flags": "integer",
+     "traceId": "string",
+     "spanId": "string",
      "filter": "array",
+     "timeRange": "object",
      "dataset": "string",
      "sampling": "object",
      "ordering": "array",
@@ -5833,11 +5918,25 @@
      "POST collection"
     ],
     "properties": {
+     "action": "string",
+     "attributes": "array",
+     "category": "string",
+     "disableAutoTimeout": "boolean",
+     "endTs": "object",
+     "enterpriseId": "integer",
+     "id": "string",
+     "initiatorType": "string",
+     "jobEntities": "array",
+     "jobType": "string",
+     "originalEnterpriseId": "integer",
+     "startTs": "object",
+     "status": "string",
+     "targets": "array",
+     "traceSessionId": "string",
+     "usage": "string",
+     "user": "string",
+     "userId": "string",
      "cursorRef": "string",
-     "details": "array",
-     "filterEntities": "object",
-     "filterJobTypes": "array",
-     "totalLogs": "integer",
      "numLogs": "integer",
      "oldTs": "object",
      "recentTs": "object",
@@ -5845,8 +5944,13 @@
      "selectorV2": "object",
      "histogram": "array",
      "logs": "array",
+     "totalLogs": "integer",
      "histogramBucketSizeSec": "integer",
      "selectors": "array",
+     "activityId": "string",
+     "entity": "object",
+     "target": "object",
+     "ts": "object",
      "customerView": "boolean",
      "deviceIds": "array"
     },
@@ -5880,9 +5984,14 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resource": "object",
-     "scopeLogs": "array",
-     "schemaUrl": "string"
+     "timeUnixNano": "string",
+     "observedTimeUnixNano": "string",
+     "severityNumber": "integer",
+     "severityText": "string",
+     "body": "object",
+     "attributes": "array",
+     "traceId": "string",
+     "spanId": "string"
     },
     "evidence": [
      "openapi/_original/highlight-otlp-logs-api-openapi.yml#POST /v1/logs"
@@ -6017,14 +6126,13 @@
      "GET collection"
     ],
     "properties": {
+     "name": "string",
      "status": "string",
-     "output": "string",
-     "outputType": "string",
      "errorMessage": "string",
-     "steps": "array",
-     "reports": "object",
-     "elements": "array",
-     "stats": "object",
+     "lineNumber": "integer",
+     "severity": "string",
+     "line": "string",
+     "timestamp": "string",
      "url": "string"
     },
     "evidence": [
@@ -6214,8 +6322,6 @@
      "POST collection"
     ],
     "properties": {
-     "totalHits": "integer",
-     "collectorLogs": "array",
      "level": "string",
      "message": "string",
      "component": "string",
@@ -6256,9 +6362,16 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resource": "object",
-     "scopeLogs": "array",
-     "schemaUrl": "string"
+     "timeUnixNano": "string",
+     "observedTimeUnixNano": "string",
+     "severityNumber": "integer",
+     "severityText": "string",
+     "body": "object",
+     "attributes": "array",
+     "droppedAttributesCount": "integer",
+     "flags": "integer",
+     "traceId": "string",
+     "spanId": "string"
     },
     "evidence": [
      "openapi/_original/openapi.yml#POST /v1/logs"
@@ -6273,10 +6386,11 @@
      "POST collection"
     ],
     "properties": {
-     "content": "array",
-     "page": "integer",
-     "size": "integer",
-     "total": "integer",
+     "timestamp": "string",
+     "rule_id": "string",
+     "level": "string",
+     "message": "string",
+     "markers": "object",
      "stream": "string",
      "text": "string",
      "url": "string",
@@ -6457,8 +6571,6 @@
      "POST collection"
     ],
     "properties": {
-     "annotationLogs": "array",
-     "nextPageToken": "string",
      "annotationLogId": "string",
      "createdDate": "string",
      "modifiedDate": "string",
@@ -6469,7 +6581,16 @@
      "assigned": "object",
      "stateUpdate": "object",
      "comment": "object",
-     "logs": "array"
+     "webhookLogId": "string",
+     "webhookId": "string",
+     "eventId": "string",
+     "organizationId": "string",
+     "status": "string",
+     "payload": "string",
+     "retryAttemptNumber": "integer",
+     "errorReason": "string",
+     "sentDate": "string",
+     "modifiedByUserId": "string"
     },
     "evidence": [
      "openapi/_original/sift-stack-openapi.json#DELETE /api/v1/annotations/{annotationId}/logs/{annotationLogId}",
@@ -6486,11 +6607,21 @@
      "GET collection"
     ],
     "properties": {
-     "lookupStatus": "string",
-     "lang": "string",
-     "events": "array",
-     "page": "object",
-     "empty": "boolean"
+     "logId": "integer",
+     "ns": "integer",
+     "title": "string",
+     "pageId": "integer",
+     "logPage": "integer",
+     "revId": "integer",
+     "params": "object",
+     "type": "string",
+     "action": "string",
+     "user": "string",
+     "userId": "integer",
+     "temp": "boolean",
+     "timestamp": "string",
+     "comment": "string",
+     "tags": "array"
     },
     "evidence": [
      "openapi/_original/social-fetch-openapi.json#GET /v1/wikipedia/logs"
@@ -6530,11 +6661,11 @@
      "GET item"
     ],
     "properties": {
-     "id": "integer",
-     "uuid": "string",
-     "createdAt": "integer",
-     "updatedAt": "integer",
-     "body": "array"
+     "outcome": "string",
+     "message": "string",
+     "cog": "string",
+     "stepId": "string",
+     "stepData": "object"
     },
     "evidence": [
      "openapi/_original/stack-moxie-openapi.json#GET /v1/organizations/{org}/scenarios/{scenarioId}/runs/{runId}/log/{id}",
@@ -7090,13 +7221,10 @@
      "POST collection"
     ],
     "properties": {
-     "timeSeries": "array",
-     "nextPageToken": "string",
-     "metric": "object",
-     "resource": "object",
-     "metricKind": "string",
-     "valueType": "string",
-     "points": "array"
+     "boolValue": "boolean",
+     "int64Value": "string",
+     "doubleValue": "number",
+     "stringValue": "string"
     },
     "evidence": [
      "openapi/_original/openapi.yml#GET /v3/projects/{projectId}/timeSeries",
@@ -7112,8 +7240,6 @@
      "POST collection"
     ],
     "properties": {
-     "timeSeries": "array",
-     "nextPageToken": "string",
      "metric": "object",
      "resource": "object",
      "metricKind": "string",
@@ -7134,7 +7260,12 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resourceMetrics": "array"
+     "name": "string",
+     "description": "string",
+     "unit": "string",
+     "gauge": "object",
+     "sum": "object",
+     "histogram": "object"
     },
     "evidence": [
      "openapi/_original/highlight-otlp-metrics-api-openapi.yml#POST /v1/metrics"
@@ -7174,11 +7305,14 @@
      "series_0.data": "number",
      "series_1.data": "number",
      "group": "array",
-     "series": "array",
-     "startTime": "number",
-     "endTime": "number",
-     "granularity": "string",
-     "seriesReturnType": "string"
+     "sourceId": "string",
+     "aggFn": "string",
+     "field": "string",
+     "where": "string",
+     "whereLanguage": "string",
+     "groupBy": "array",
+     "metricName": "string",
+     "metricDataType": "string"
     },
     "evidence": [
      "openapi/_original/hyperdx-external-api-openapi.json#POST /api/v2/charts/series"
@@ -7202,10 +7336,10 @@
      "metricId": "string",
      "adjustedTimeframe": "object",
      "metrics": "object",
-     "includeInternal": "boolean",
-     "includeSynthetic": "boolean",
-     "tagFilterExpression": "object",
-     "timeFrame": "object",
+     "aggregation": "string",
+     "granularity": "integer",
+     "metric": "string",
+     "numeratorTagFilterExpression": "object",
      "category": "string",
      "crossSeriesAggregations": "array",
      "format": "string",
@@ -7214,6 +7348,8 @@
      "ownerType": "string",
      "tags": "array",
      "query": "string",
+     "tagFilterExpression": "object",
+     "timeFrame": "object",
      "type": "string",
      "custom": "boolean",
      "pluginId": "string",
@@ -7230,9 +7366,14 @@
      "tagName": "string",
      "empty": "boolean",
      "tagFilters": "array",
-     "customTags": "object",
-     "runType": "string",
-     "tests": "array",
+     "applicationId": "string",
+     "applicationIds": "array",
+     "locationId": "array",
+     "mobileApplicationIds": "array",
+     "serviceId": "string",
+     "testId": "string",
+     "testName": "string",
+     "websiteIds": "array",
      "disableDefaultGroups": "boolean",
      "groups": "array",
      "includeAggregatedTestIds": "boolean",
@@ -7555,9 +7696,14 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resource": "object",
-     "scopeMetrics": "array",
-     "schemaUrl": "string"
+     "name": "string",
+     "description": "string",
+     "unit": "string",
+     "gauge": "object",
+     "sum": "object",
+     "histogram": "object",
+     "exponentialHistogram": "object",
+     "summary": "object"
     },
     "evidence": [
      "openapi/_original/openapi.yml#POST /v1/metrics"
@@ -7643,16 +7789,19 @@
      "POST collection"
     ],
     "properties": {
-     "config_id": "string",
-     "bucket_granularity": "string",
-     "overall_average_score": [
+     "timestamp": "string",
+     "score": [
       "number",
       "null"
      ],
      "total_runs": "number",
-     "timeseries": "array",
+     "resource_version_id": [
+      "string",
+      "null"
+     ],
      "start_date": "string",
      "end_date": "string",
+     "config_id": "string",
      "filters": "object",
      "timezone": "string",
      "meta": "object",
@@ -7660,10 +7809,20 @@
      "series": "array",
      "totals": "object",
      "tool_ids": "array",
-     "rows": "array",
+     "date": "string",
+     "runs": "number",
+     "actions": "number",
+     "credits": "number",
+     "error_rate": "number",
      "agent_ids": "array",
      "children": "string",
-     "workforce_ids": "array"
+     "tasks": "number",
+     "agent_model_credits": "number",
+     "tool_credits": "number",
+     "workforce_ids": "array",
+     "agent_tasks": "number",
+     "workforce_tasks": "number",
+     "tool_runs": "number"
     },
     "evidence": [
      "openapi/_original/relevance-ai-openapi.json#POST /analytics/agent/breakdown/timeseries",
@@ -7743,8 +7902,14 @@
      "GET collection"
     ],
     "properties": {
-     "computeStats": "object",
-     "metrics": "array",
+     "chainId": "array",
+     "contractAddress": "array",
+     "contractName": "array",
+     "displayName": "string",
+     "labels": "object",
+     "metadata": "object",
+     "name": "string",
+     "projectId": "string",
      "candidates": "object",
      "series": "object"
     },
@@ -7781,10 +7946,40 @@
      "GET item"
     ],
     "properties": {
-     "lookupStatus": "string",
+     "id": "string",
+     "slug": "string",
+     "title": "string",
+     "seriesType": "string",
+     "recurrence": "string",
+     "description": "string",
+     "image": "string",
+     "icon": "string",
+     "status": "string",
+     "active": "boolean",
+     "closed": "boolean",
+     "archived": "boolean",
+     "featured": "boolean",
+     "volume": "object",
+     "liquidity": null,
+     "commentCount": "integer",
+     "startDate": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "url": "string",
+     "startsAt": "string",
+     "endsAt": "string",
+     "closedAt": "string",
+     "openInterest": null,
+     "competitive": "number",
+     "negRisk": "boolean",
+     "isUserCreated": "boolean",
+     "resolutionSource": "string",
+     "metadata": "object",
+     "marketCount": "integer",
+     "tags": "array",
      "series": "array",
-     "page": "object",
-     "events": "array"
+     "sports": "object",
+     "markets": "array"
     },
     "evidence": [
      "openapi/_original/social-fetch-openapi.json#GET /v1/polymarket/series",
@@ -7844,9 +8039,11 @@
      "POST collection"
     ],
     "properties": {
-     "metric_name": "string",
-     "organization_id": "string",
-     "points": "array",
+     "bool_value": "boolean",
+     "enum_value": "string",
+     "numeric_value": "number",
+     "event_time": "integer",
+     "labels": "object",
      "from_timestamp_sec": "integer",
      "to_timestamp_sec": "integer",
      "cursor": "integer",
@@ -7854,6 +8051,7 @@
      "filters": "array",
      "limit": "integer",
      "logical_operator": "string",
+     "metric_name": "string",
      "metric_source": "string",
      "sort_by": "string",
      "sort_order": "string"
@@ -7890,7 +8088,13 @@
     ],
     "properties": {
      "trace_id": "string",
-     "spans": "array",
+     "span_id": "string",
+     "span_name": "string",
+     "span_kind": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "status_code": "string",
+     "attributes": "object",
      "partialSuccess": "object",
      "resourceSpans": "array"
     },
@@ -7976,7 +8180,15 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resourceSpans": "array"
+     "traceId": "string",
+     "spanId": "string",
+     "parentSpanId": "string",
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "status": "object"
     },
     "evidence": [
      "openapi/_original/arize-ai-openapi.yml#POST /v1/traces"
@@ -8015,10 +8227,6 @@
      "GET item"
     ],
     "properties": {
-     "traces": "array",
-     "total": "number",
-     "page": "integer",
-     "pageSize": "integer",
      "id": "string",
      "environment": "string",
      "isSuccess": [
@@ -8030,9 +8238,9 @@
       "object",
       "null"
      ],
-     "stepCount": "integer",
      "startedAt": "string",
      "endedAt": "string",
+     "stepCount": "integer",
      "durationSeconds": "number",
      "ingestedAt": "string",
      "spans": "array",
@@ -8083,7 +8291,16 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resourceSpans": "array"
+     "traceId": "string",
+     "spanId": "string",
+     "parentSpanId": "string",
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "status": "object",
+     "events": "array"
     },
     "evidence": [
      "openapi/_original/bugsnag-trace-openapi.yml#POST /v1/traces"
@@ -8097,8 +8314,30 @@
      "GET collection"
     ],
     "properties": {
-     "devices": "array",
-     "summary": "object"
+     "app-vis": "string",
+     "art-vis": "string",
+     "connectedVManages": "string",
+     "device-ip": "string",
+     "device-type": "string",
+     "dia-vis": "string",
+     "domain-mon": "string",
+     "domain_monitor_can_be_started": "string",
+     "dscp-is-valid": "string",
+     "duration": "string",
+     "entry_time": "integer",
+     "expire-time": "integer",
+     "local-system-ip": "string",
+     "message": "string",
+     "parent-trace-id": "integer",
+     "qos-mon": "string",
+     "site-id": "string",
+     "source-site": "string",
+     "state": "string",
+     "trace-id": "integer",
+     "trace-name": "string",
+     "uuid": "string",
+     "version": "string",
+     "vpn-id": "string"
     },
     "evidence": [
      "openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /stream/device/nwpi/tasks/{taskId}/traces"
@@ -8127,11 +8366,29 @@
      "POST collection"
     ],
     "properties": {
-     "executionTime": "string",
-     "timeRange": "object",
-     "cursors": "object",
-     "resourceSpans": "array",
+     "traceId": "string",
+     "spanId": "string",
+     "traceState": "string",
+     "parentSpanId": "string",
+     "hasChildren": "boolean",
+     "flags": "integer",
+     "name": "string",
+     "dash0Name": "string",
+     "dash0TraceOriginType": "string",
+     "dash0TraceOriginParentSpanId": "string",
+     "dash0ForwardLinks": "array",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "droppedAttributesCount": "integer",
+     "events": "array",
+     "droppedEventsCount": "integer",
+     "links": "array",
+     "droppedLinksCount": "integer",
+     "status": "object",
      "filter": "array",
+     "timeRange": "object",
      "dataset": "string",
      "sampling": "object",
      "ordering": "array",
@@ -8344,11 +8601,12 @@
      "PATCH collection"
     ],
     "properties": {
-     "traces": "array",
-     "nextPageToken": "string",
-     "projectId": "string",
-     "traceId": "string",
-     "spans": "array"
+     "spanId": "string",
+     "name": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "parentSpanId": "string",
+     "labels": "object"
     },
     "evidence": [
      "openapi/_original/openapi.yml#GET /v1/projects/{projectId}/traces",
@@ -8379,9 +8637,17 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resource": "object",
-     "scopeSpans": "array",
-     "schemaUrl": "string"
+     "traceId": "string",
+     "spanId": "string",
+     "parentSpanId": "string",
+     "name": "string",
+     "kind": "string",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "status": "object",
+     "events": "array",
+     "links": "array"
     },
     "evidence": [
      "openapi/_original/highlight-otlp-traces-api-openapi.yml#POST /v1/traces"
@@ -8448,8 +8714,15 @@
     ],
     "properties": {
      "traceID": "string",
-     "spans": "array",
-     "processes": "object",
+     "spanID": "string",
+     "operationName": "string",
+     "references": "array",
+     "flags": "integer",
+     "startTime": "integer",
+     "duration": "integer",
+     "tags": "array",
+     "logs": "array",
+     "processID": "string",
      "warnings": "array"
     },
     "evidence": [
@@ -8468,13 +8741,29 @@
      "POST collection"
     ],
     "properties": {
-     "batch": "object",
-     "resource": null,
-     "scopeSpans": "array",
-     "schemaUrl": "string",
-     "serviceName": "string",
+     "traceId": "string",
+     "spanId": "string",
      "operationName": "string",
-     "attributes": "string",
+     "references": "array",
+     "flags": "integer",
+     "startTime": "string",
+     "duration": "string",
+     "tags": "array",
+     "logs": "array",
+     "traceState": "string",
+     "parentSpanId": "string",
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "droppedAttributesCount": "integer",
+     "events": "array",
+     "droppedEventsCount": "integer",
+     "links": "array",
+     "droppedLinksCount": "integer",
+     "status": null,
+     "serviceName": "string",
      "startTimeMin": "string",
      "startTimeMax": "string",
      "durationMin": "string",
@@ -8497,8 +8786,9 @@
      "POST collection"
     ],
     "properties": {
-     "nodes": "object",
-     "paths": "array",
+     "asPath": "array",
+     "isComplete": "boolean",
+     "hops": "array",
      "id": "string",
      "startTime": "string",
      "endTime": "string",
@@ -8579,10 +8869,17 @@
      "POST collection"
     ],
     "properties": {
-     "resourceSpans": "array",
+     "traceId": null,
+     "spanId": null,
+     "parentSpanId": null,
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": null,
+     "endTimeUnixNano": null,
+     "attributes": "array",
+     "status": null,
      "id": "string",
      "timestamp": "string",
-     "name": "string",
      "input": null,
      "output": null,
      "sessionId": "string",
@@ -8792,9 +9089,22 @@
     ],
     "properties": {
      "partialSuccess": "object",
-     "resource": "object",
-     "scopeSpans": "array",
-     "schemaUrl": "string"
+     "traceId": "string",
+     "spanId": "string",
+     "traceState": "string",
+     "parentSpanId": "string",
+     "flags": "integer",
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "droppedAttributesCount": "integer",
+     "events": "array",
+     "droppedEventsCount": "integer",
+     "links": "array",
+     "droppedLinksCount": "integer",
+     "status": "object"
     },
     "evidence": [
      "openapi/_original/openapi.yml#POST /v1/traces"
@@ -8843,11 +9153,6 @@
      "ids": "array",
      "update": "object",
      "merge_tags": "boolean",
-     "page": "integer",
-     "size": "integer",
-     "total": "integer",
-     "content": "array",
-     "sortableBy": "array",
      "created_at": "string",
      "created_by": "string",
      "last_updated_by": "string",
@@ -8927,10 +9232,16 @@
      "POST collection"
     ],
     "properties": {
-     "id": "string",
      "name": "string",
-     "spans": "array",
-     "closed": "boolean"
+     "context": "object",
+     "kind": "string",
+     "parent_id": "string",
+     "start_time": "integer",
+     "end_time": "integer",
+     "status": "object",
+     "attributes": "object",
+     "resource": "object",
+     "log_request": "object"
     },
     "evidence": [
      "openapi/_original/promptlayer-openapi.yml#GET /traces/{id}",
@@ -9055,8 +9366,17 @@
      "metrics": "object",
      "startedAt": "string",
      "criticalPathServiceBreakdownSummary": "object",
-     "spanPage": "array",
-     "next": "string"
+     "spanId": "string",
+     "traceId": "string",
+     "parentSpanId": "string",
+     "operationName": "string",
+     "service": "string",
+     "remoteService": "string",
+     "duration": "integer",
+     "status": "object",
+     "kind": "string",
+     "tagsJSON": "string",
+     "metadata": "object"
     },
     "evidence": [
      "openapi/_original/sumo-logic-openapi.yml#GET /v1/tracing/spanquery/{queryId}/rows/{rowId}/spans",
@@ -9084,7 +9404,15 @@
      "GET item"
     ],
     "properties": {
-     "batches": "array"
+     "traceId": "string",
+     "spanId": "string",
+     "parentSpanId": "string",
+     "name": "string",
+     "kind": "integer",
+     "startTimeUnixNano": "string",
+     "endTimeUnixNano": "string",
+     "attributes": "array",
+     "status": "object"
     },
     "evidence": [
      "openapi/_original/tempo-openapi.yml#GET /api/traces/{traceID}"
@@ -9155,9 +9483,11 @@
      "GET item"
     ],
     "properties": {
-     "traces": "array",
-     "metrics": null,
      "trace_id": "string",
+     "root_service_name": null,
+     "root_trace_name": null,
+     "start_time_unix_nano": null,
+     "duration_ms": null,
      "trace_id_base64": "string",
      "batches": "array"
     },
@@ -9263,8 +9593,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "slos": "array",
      "slug": "string",
      "name": "string",
      "description": "string",
@@ -9301,16 +9629,6 @@
      "POST collection"
     ],
     "properties": {
-     "slos": "array",
-     "hasMore": "boolean",
-     "next": "string",
-     "previous": "string",
-     "ids": "array",
-     "value": null,
-     "path": "string",
-     "op": "string",
-     "from": "string",
-     "deleted": "string",
      "id": "integer",
      "name": "string",
      "description": "string",
@@ -9331,7 +9649,15 @@
      "changeDate": "string",
      "createDate": "string",
      "changeContactId": "integer",
-     "createContactId": "integer"
+     "createContactId": "integer",
+     "value": null,
+     "path": "string",
+     "op": "string",
+     "from": "string",
+     "deleted": "string",
+     "hasMore": "boolean",
+     "next": "string",
+     "previous": "string"
     },
     "evidence": [
      "openapi/_original/catchpoint-rest-api-v2-openapi-original.json#DELETE /v2/slo/{sloIds}",
@@ -9353,16 +9679,6 @@
      "POST collection"
     ],
     "properties": {
-     "slos": "array",
-     "hasMore": "boolean",
-     "next": "string",
-     "previous": "string",
-     "ids": "array",
-     "value": null,
-     "path": "string",
-     "op": "string",
-     "from": "string",
-     "deleted": "string",
      "id": "integer",
      "name": "string",
      "description": "string",
@@ -9383,7 +9699,15 @@
      "changeDate": "string",
      "createDate": "string",
      "changeContactId": "integer",
-     "createContactId": "integer"
+     "createContactId": "integer",
+     "value": null,
+     "path": "string",
+     "op": "string",
+     "from": "string",
+     "deleted": "string",
+     "hasMore": "boolean",
+     "next": "string",
+     "previous": "string"
     },
     "evidence": [
      "openapi/_original/catchpoint-systems-rest-api-v2-openapi.json#DELETE /v2/slo/{sloIds}",
@@ -9405,8 +9729,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "slos": "array",
      "annotations": "object",
      "collection_ref": "object",
      "created_at": "string",
@@ -9766,7 +10088,16 @@
      "targets": "array",
      "metadata": "array",
      "lastUpdated": "integer",
-     "lastUpdatedBy": "string"
+     "lastUpdatedBy": "string",
+     "detectLabel": "string",
+     "disabled": "boolean",
+     "notifications": "array",
+     "parameterizedBody": "string",
+     "parameterizedSubject": "string",
+     "runbookUrl": "string",
+     "severity": "string",
+     "tip": "string",
+     "parameters": "object"
     },
     "evidence": [
      "openapi/_original/splunk-observability-slo-openapi.yml#DELETE /slo/{id}",
@@ -12018,6 +12349,7 @@
     "apitoolkit",
     "appdynamics",
     "archestra",
+    "arize-ai",
     "athina",
     "atla",
     "axiom-co",
@@ -12026,6 +12358,7 @@
     "bigeye",
     "bluejay",
     "broadcom",
+    "bugsnag",
     "calyptia",
     "cast-ai",
     "catchpoint",
@@ -12052,7 +12385,6 @@
     "glassnode",
     "glitchtip",
     "google-cloud-chronicle",
-    "google-cloud-monitoring",
     "google-cloud-operations-suite",
     "google-cloud-trace",
     "grafana",
@@ -12202,7 +12534,6 @@
     "openobserve",
     "openstatus",
     "opentelemetry",
-    "opik",
     "opsgenie",
     "oracle-enterprise-manager",
     "panther",
@@ -12224,6 +12555,7 @@
     "sumo-logic",
     "sysdig",
     "tableaux-de-bord",
+    "tempo",
     "thanos",
     "thousandeyes",
     "uptimerobot",
@@ -12245,6 +12577,7 @@
     "calyptia",
     "checkly",
     "chronosphere",
+    "cisco-catalyst-sdwan",
     "codag",
     "controlup",
     "coval",
@@ -12281,6 +12614,7 @@
     "phare",
     "phoenix",
     "portkey",
+    "promptlayer",
     "pydantic-ai",
     "relevance-ai",
     "runwhen",
@@ -12317,6 +12651,9 @@
     "dell-servers",
     "logicmonitor",
     "sciencelogic"
+   ],
+   "kebab-case": [
+    "cisco-catalyst-sdwan"
    ]
   }
  }

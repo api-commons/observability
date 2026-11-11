@@ -24,6 +24,6 @@ concepts:
     - alerts
     properties:
       status: status
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/uptimerobot-openapi.yaml#GET /incidents/{id}/alerts

@@ -8,6 +8,8 @@ concepts:
     - traces
     properties:
       trace_id: trace_id
-    core_coverage: 0.0
+      status: status
+      duration: duration_ms
+    core_coverage: 0.333
     evidence:
     - openapi/_original/encore-platform-openapi.yml#GET /apps/{app_id}/traces

@@ -8,12 +8,14 @@ concepts:
     - spans
     - traces
     properties:
-      id: id
       trace_id: trace_id
       name: name
       metadata: attributes
+      parent_span_id: parent_id
+      id: id
       start_time: start_time
-    core_coverage: 0.0
+      end_time: end_time
+    core_coverage: 1.0
     evidence:
     - openapi/_original/phoenix-rest-api-openapi.yml#DELETE /v1/spans/{span_identifier}
     - openapi/_original/phoenix-rest-api-openapi.yml#DELETE /v1/traces/{trace_identifier}

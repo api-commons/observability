@@ -9,7 +9,10 @@ concepts:
     properties:
       trace_id: trace_id
       metadata: metadata
-    core_coverage: 0.0
+      parent_span_id: parent_span_id
+      span_id: span_id
+      kind: kind
+    core_coverage: 0.667
     evidence:
     - openapi/_original/seekr-agents-openapi-original.json#GET /v1/observability/spans/{span_id}
     - openapi/_original/seekr-agents-openapi-original.json#POST /v1/observability/spans

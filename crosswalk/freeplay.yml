@@ -8,6 +8,6 @@ concepts:
     - traces
     properties:
       trace_id: trace_id
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/freeplay-openapi.json#POST /api/v2/projects/{project_id}/search/traces

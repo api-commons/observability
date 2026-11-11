@@ -39,7 +39,8 @@ concepts:
   trace:
     path_segment:
     - traces
-    properties: {}
+    properties:
+      status: status
     core_coverage: 0.0
     evidence:
     - openapi/_original/coval-traces-openapi.yml#POST /traces

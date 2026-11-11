@@ -22,7 +22,9 @@ concepts:
       - id
       - alertId
       status: state
-      description: details
+      name: name
+      monitor_id: ruleId
+      severity: severity
     core_coverage: 1.0
     evidence:
     - openapi/_original/thousandeyes-alerts-openapi-original.yml#GET /alerts
@@ -38,10 +40,10 @@ concepts:
       description: description
       id: dashboardId
       updated_at: modifiedDate
+      created_by: createdBy
       widgets:
       - widgets
       - layout
-      created_by: createdBy
     core_coverage: 0.75
     evidence:
     - openapi/_original/thousandeyes-dashboards-openapi-original.yml#DELETE /dashboards/{dashboardId}
@@ -53,8 +55,8 @@ concepts:
     path_segment:
     - logs
     properties:
-      id: id
       timestamp: timestampMs
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/thousandeyes-endpoint-agents-openapi-original.yml#GET /endpoint/agents/{agentId}/logs

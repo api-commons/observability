@@ -8,8 +8,8 @@ concepts:
     - monitors
     - monitor
     properties:
-      name: display_name
       id: monitor_id
+      name: display_name
       status: status
       type: type
       tags: tag_ids

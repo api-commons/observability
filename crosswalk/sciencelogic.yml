@@ -16,7 +16,7 @@ concepts:
     - alerts
     properties:
       status: Enabled
-    core_coverage: 0.5
+    core_coverage: 0.333
     evidence:
     - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /settings/alerts
     - openapi/_original/sciencelogic-skylar-compliance-openapi.json#PUT /settings/alerts
@@ -28,8 +28,8 @@ concepts:
       id:
       - ID
       - ObjectID
-      created_at: Created
       level: Level
+      created_at: Created
     core_coverage: 0.0
     evidence:
     - openapi/_original/sciencelogic-skylar-compliance-openapi.json#DELETE /settings/appliance/debug/log

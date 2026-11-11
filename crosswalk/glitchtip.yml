@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - monitors
     properties:
-      name: name
       id: id
+      name: name
       type: monitorType
       created_at: created
       interval: interval
@@ -25,7 +25,7 @@ concepts:
     properties:
       id: id
       name: name
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/glitchtip-openapi.json#DELETE /api/0/projects/{organization_slug}/{project_slug}/alerts/{alert_id}/
     - openapi/_original/glitchtip-openapi.json#GET /api/0/projects/{organization_slug}/{project_slug}/alerts/
@@ -36,9 +36,10 @@ concepts:
     path_segment:
     - logs
     properties:
-      id: id
       timestamp: timestamp
+      id: id
       level: level
+      message: body
     core_coverage: 0.0
     evidence:
     - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/logs/

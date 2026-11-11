@@ -9,6 +9,7 @@ concepts:
     properties:
       id: _id
       created_at: created_at
+      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/portkey-openapi.yml#GET /logs/{logId}

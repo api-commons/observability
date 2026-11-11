@@ -9,6 +9,7 @@ concepts:
     properties:
       timestamp: timestamp
       level: level
+      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/choreo-insights-openapi.yml#GET /logs

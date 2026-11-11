@@ -6,7 +6,10 @@ concepts:
   log:
     path_segment:
     - logs
-    properties: {}
+    properties:
+      timestamp: timestamp
+      level: level
+      message: text
     core_coverage: 0.0
     evidence:
     - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/automations/evaluators/{id}/logs
@@ -18,12 +21,16 @@ concepts:
     - traces
     - spans
     properties:
-      id: id
       trace_id: trace_id
       name: name
       metadata: metadata
+      parent_span_id: parent_span_id
+      id: id
       start_time: start_time
-    core_coverage: 0.0
+      duration: duration
+      end_time: end_time
+      tags: tags
+    core_coverage: 1.0
     evidence:
     - openapi/_original/opik-rest-api-openapi.yml#DELETE /v1/private/spans/{id}
     - openapi/_original/opik-rest-api-openapi.yml#DELETE /v1/private/traces/{id}

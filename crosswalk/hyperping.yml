@@ -8,8 +8,8 @@ concepts:
     - monitors
     - healthchecks
     properties:
-      name: name
       id: uuid
+      name: name
       status:
       - paused
       - status

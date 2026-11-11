@@ -6,14 +6,25 @@ concepts:
   log:
     path_segment:
     - logs
-    properties: {}
+    properties:
+      id: id
+      metadata: attributes
+      message: body
     core_coverage: 0.0
     evidence:
     - openapi/_original/dash0-openapi.json#POST /api/logs
   trace:
     path_segment:
     - spans
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      trace_id: traceId
+      name: name
+      metadata: attributes
+      parent_span_id: parentSpanId
+      span_id: spanId
+      kind: kind
+      status: status
+      start_time_unix_nano: startTimeUnixNano
+    core_coverage: 1.0
     evidence:
     - openapi/_original/dash0-openapi.json#POST /api/spans

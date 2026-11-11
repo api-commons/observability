@@ -8,11 +8,12 @@ concepts:
     - logs
     properties:
       id: id
-      created_at: createdAt
       level: logLevel
       status:
       - enabled
       - status
+      created_at: createdAt
+      message: line
     core_coverage: 0.0
     evidence:
     - openapi/_original/lightrun-openapi-original.json#GET /api/v1/actions/logs/{id}

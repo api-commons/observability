@@ -7,8 +7,13 @@ concepts:
     path_segment:
     - traces
     properties:
-      trace_id: traceId
-    core_coverage: 0.0
+      name: name
+      parent_span_id: parentSpanId
+      span_id: spanId
+      start_time: startTime
+      end_time: endTime
+      tags: labels
+    core_coverage: 0.333
     evidence:
     - openapi/_original/openapi.yml#GET /v1/projects/{projectId}/traces
     - openapi/_original/openapi.yml#GET /v1/projects/{projectId}/traces/{traceId}

@@ -5,6 +5,20 @@
   "description": "The common monitor in Observability, distilled from 44 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.727,
+      "x-commons-providers": 32,
+      "x-commons-spellings": [
+        "id",
+        "monitorId",
+        "monitor_id",
+        "checkId",
+        "uuid",
+        "check_id"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
@@ -16,24 +30,11 @@
         "display_name"
       ]
     },
-    "id": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.659,
-      "x-commons-providers": 29,
-      "x-commons-spellings": [
-        "id",
-        "monitor_id",
-        "checkId",
-        "uuid",
-        "monitorId"
-      ]
-    },
     "status": {
       "type": "boolean",
       "x-commons-tier": "core",
-      "x-commons-share": 0.545,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.568,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "status",
         "enabled",
@@ -59,11 +60,11 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.455,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.477,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
-        "createdAt",
         "created_at",
+        "createdAt",
         "created",
         "create_time",
         "dateCreated"

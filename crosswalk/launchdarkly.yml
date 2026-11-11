@@ -6,7 +6,8 @@ concepts:
   log:
     path_segment:
     - logs
-    properties: {}
+    properties:
+      metadata: metadata
     core_coverage: 0.0
     evidence:
     - openapi/_original/launchdarkly-openapi.json#GET /api/v2/usage/observability/logs
@@ -15,6 +16,6 @@ concepts:
     - traces
     properties:
       metadata: metadata
-    core_coverage: 0.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/launchdarkly-openapi.json#GET /api/v2/usage/observability/traces

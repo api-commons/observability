@@ -6,8 +6,11 @@ concepts:
   monitor:
     path_segment:
     - checks
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: check_id
+      status: status
+      created_at: created_at
+    core_coverage: 0.5
     evidence:
     - openapi/_original/relevance-ai-openapi.json#GET /evals/{resource_type}/{resource_id}/pre-publish/checks
   metric:

@@ -8,8 +8,8 @@ concepts:
     - checks
     - probes
     properties:
-      name: name
       id: id
+      name: name
       status:
       - status
       - paused

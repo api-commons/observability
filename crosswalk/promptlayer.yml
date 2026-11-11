@@ -7,9 +7,14 @@ concepts:
     path_segment:
     - traces
     properties:
-      id: id
       name: name
-    core_coverage: 0.0
+      metadata: attributes
+      parent_span_id: parent_id
+      kind: kind
+      start_time: start_time
+      status: status
+      end_time: end_time
+    core_coverage: 0.667
     evidence:
     - openapi/_original/promptlayer-openapi.yml#GET /traces/{id}
     - openapi/_original/promptlayer-openapi.yml#POST /otlp/v1/traces

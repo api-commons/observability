@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - monitors
     properties:
-      name: name
       id: id
+      name: name
       status: status
       created_at: createdAt
       updated_at: updatedAt
@@ -22,7 +22,9 @@ concepts:
   log:
     path_segment:
     - logs
-    properties: {}
+    properties:
+      timestamp: timestamp
+      id: logId
     core_coverage: 0.0
     evidence:
     - openapi/_original/social-fetch-openapi.json#GET /v1/wikipedia/logs

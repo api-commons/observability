@@ -22,6 +22,7 @@ concepts:
     properties:
       id: id
       status: status
+      metadata: attributes
     core_coverage: 0.0
     evidence:
     - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}/logs/{key}

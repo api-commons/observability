@@ -9,10 +9,14 @@ concepts:
     - traces
     - trace
     properties:
-      id: id
       trace_id: traceId
       name: name
-    core_coverage: 0.0
+      parent_span_id: parentId
+      id: id
+      kind: kind
+      duration: duration
+      tags: tags
+    core_coverage: 0.667
     evidence:
     - openapi/_original/apache-zipkin-openapi.yml#GET /spans
     - openapi/_original/apache-zipkin-openapi.yml#GET /trace/{traceId}

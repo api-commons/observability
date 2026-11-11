@@ -17,7 +17,9 @@ concepts:
     - traces
     properties:
       trace_id: trace_id
-    core_coverage: 0.0
+      duration: duration_ms
+      start_time_unix_nano: start_time_unix_nano
+    core_coverage: 0.333
     evidence:
     - openapi/_original/vijil-openapi-original.json#GET /v1/telemetry/traces
     - openapi/_original/vijil-openapi-original.json#GET /v1/telemetry/traces/{trace_id}
