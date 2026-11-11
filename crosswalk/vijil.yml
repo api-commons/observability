@@ -1,0 +1,23 @@
+provider: vijil
+apis_io: https://apis.io/providers/vijil/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vijil-openapi-original.json#GET /v1/campaigns/{campaign_id}/logs
+    - openapi/_original/vijil-openapi-original.json#GET /v1/evaluations/{evaluation_id}/logs
+    - openapi/_original/vijil-openapi-original.json#GET /v1/telemetry/logs
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: trace_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vijil-openapi-original.json#GET /v1/telemetry/traces
+    - openapi/_original/vijil-openapi-original.json#GET /v1/telemetry/traces/{trace_id}

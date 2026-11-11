@@ -1,0 +1,23 @@
+provider: site24x7
+apis_io: https://apis.io/providers/site24x7/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    - monitor
+    properties:
+      name: display_name
+      id: monitor_id
+      status: status
+      type: type
+      tags: tag_ids
+      interval: check_frequency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/site24x7-api-openapi.yml#DELETE /monitors/{monitor_id}
+    - openapi/_original/site24x7-api-openapi.yml#GET /alarms/monitor/{monitor_id}
+    - openapi/_original/site24x7-api-openapi.yml#GET /monitors
+    - openapi/_original/site24x7-api-openapi.yml#GET /monitors/{monitor_id}
+    - openapi/_original/site24x7-api-openapi.yml#GET /outages/monitor/{monitor_id}

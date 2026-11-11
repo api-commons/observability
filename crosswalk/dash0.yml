@@ -1,0 +1,19 @@
+provider: dash0
+apis_io: https://apis.io/providers/dash0/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dash0-openapi.json#POST /api/logs
+  trace:
+    path_segment:
+    - spans
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dash0-openapi.json#POST /api/spans

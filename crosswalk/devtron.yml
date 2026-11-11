@@ -1,0 +1,12 @@
+provider: devtron
+apis_io: https://apis.io/providers/devtron/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/devtron-openapi-original.yml#GET /k8s/pods/logs/{podName}

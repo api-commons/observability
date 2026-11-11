@@ -1,0 +1,20 @@
+provider: metaplane
+apis_io: https://apis.io/providers/metaplane/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      type: type
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/metaplane-api-openapi.yml#GET /v1/monitors/{monitorId}
+    - openapi/_original/metaplane-api-openapi.yml#POST /v1/monitors
+    - openapi/_original/metaplane-api-openapi.yml#POST /v1/monitors/{monitorId}

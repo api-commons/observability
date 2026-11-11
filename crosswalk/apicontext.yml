@@ -1,0 +1,38 @@
+provider: apicontext
+apis_io: https://apis.io/providers/apicontext/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/apicontext-apimetrics-openapi.json#GET /api/3/monitors/
+    - openapi/_original/apicontext-apimetrics-openapi.json#GET /api/3/monitors/{monitor_id}
+    - openapi/_original/apicontext-platform-openapi.yaml#GET /api/3/monitors/
+    - openapi/_original/apicontext-platform-openapi.yaml#GET /api/3/monitors/{monitor_id}
+    - openapi/_original/apicontext-platform-openapi.yml#GET /api/3/monitors/
+  metric:
+    path_segment:
+    - metrics
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/apicontext-apimetrics-openapi.json#GET /api/2/calls/{call_id}/stats/metrics/{location_id}/
+    - openapi/_original/apicontext-platform-openapi.yaml#GET /api/2/calls/{call_id}/stats/metrics/{location_id}/
+    - openapi/_original/apicontext-platform-openapi.yml#GET /api/2/calls/{call_id}/stats/metrics/{location_id}/
+  slo:
+    path_segment:
+    - slo
+    properties:
+      created_at: created
+    core_coverage: 0.143
+    evidence:
+    - openapi/_original/apicontext-apimetrics-openapi.json#DELETE /api/2/project/slo/
+    - openapi/_original/apicontext-apimetrics-openapi.json#GET /api/2/project/slo/
+    - openapi/_original/apicontext-apimetrics-openapi.json#POST /api/2/project/slo/
+    - openapi/_original/apicontext-platform-openapi.yaml#DELETE /api/2/project/slo/
+    - openapi/_original/apicontext-platform-openapi.yaml#GET /api/2/project/slo/

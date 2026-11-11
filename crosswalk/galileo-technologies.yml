@@ -1,0 +1,20 @@
+provider: galileo-technologies
+apis_io: https://apis.io/providers/galileo-technologies/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    - spans
+    properties:
+      id: id
+      trace_id: trace_id
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/galileo-technologies-openapi.json#GET /projects/{project_id}/spans/{span_id}
+    - openapi/_original/galileo-technologies-openapi.json#GET /projects/{project_id}/traces/{trace_id}
+    - openapi/_original/galileo-technologies-openapi.json#GET /public/v2/projects/{project_id}/spans/{span_id}
+    - openapi/_original/galileo-technologies-openapi.json#GET /public/v2/projects/{project_id}/traces/{trace_id}
+    - openapi/_original/galileo-technologies-openapi.json#GET /v2/projects/{project_id}/spans/{span_id}

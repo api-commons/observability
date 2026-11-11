@@ -1,0 +1,12 @@
+provider: bugsnag
+apis_io: https://apis.io/providers/bugsnag/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bugsnag-trace-openapi.yml#POST /v1/traces

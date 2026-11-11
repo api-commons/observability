@@ -1,0 +1,15 @@
+provider: uselemma
+apis_io: https://apis.io/providers/uselemma/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/uselemma-platform-api-openapi-original.json#DELETE /traces/{trace_id}
+    - openapi/_original/uselemma-platform-api-openapi-original.json#GET /traces
+    - openapi/_original/uselemma-platform-api-openapi-original.json#GET /traces/{trace_id}

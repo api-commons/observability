@@ -1,0 +1,15 @@
+provider: waxell
+apis_io: https://apis.io/providers/waxell/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - spans
+    properties:
+      name: name
+      metadata: attributes
+      start_time: start_time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/waxell-observe-openapi.yml#POST /api/v1/observe/runs/{run_id}/spans/

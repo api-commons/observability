@@ -1,0 +1,32 @@
+provider: opik
+apis_io: https://apis.io/providers/opik/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/automations/evaluators/{id}/logs
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/local-runners/jobs/{jobId}/logs
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/optimizations/studio/{id}/logs
+    - openapi/_original/opik-rest-api-openapi.yml#POST /v1/private/local-runners/jobs/{jobId}/logs
+  trace:
+    path_segment:
+    - traces
+    - spans
+    properties:
+      id: id
+      trace_id: trace_id
+      name: name
+      metadata: metadata
+      start_time: start_time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opik-rest-api-openapi.yml#DELETE /v1/private/spans/{id}
+    - openapi/_original/opik-rest-api-openapi.yml#DELETE /v1/private/traces/{id}
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/spans
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/spans/{id}
+    - openapi/_original/opik-rest-api-openapi.yml#GET /v1/private/traces

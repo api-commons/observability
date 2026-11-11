@@ -1,0 +1,15 @@
+provider: promptlayer
+apis_io: https://apis.io/providers/promptlayer/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/promptlayer-openapi.yml#GET /traces/{id}
+    - openapi/_original/promptlayer-openapi.yml#POST /otlp/v1/traces

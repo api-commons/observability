@@ -1,0 +1,13 @@
+provider: fastly
+apis_io: https://apis.io/providers/fastly/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastly-observability-openapi.yml#POST /observability/aggregations/logs
+    - openapi/_original/fastly-observability-openapi.yml#POST /observability/logs

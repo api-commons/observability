@@ -1,0 +1,614 @@
+openapi: 3.1.0
+info:
+  title: Observability (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Observability interface, distilled from the harvested OpenAPI of 279 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /monitors:
+    get:
+      operationId: listMonitors
+      summary: List monitors
+      tags:
+      - Monitors
+      x-commons-tier: core
+      x-commons-share: 0.955
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Monitor'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createMonitor
+      summary: Create a monitor
+      tags:
+      - Monitors
+      x-commons-tier: core
+      x-commons-share: 0.795
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /monitors/{monitor_id}:
+    parameters:
+    - $ref: '#/components/parameters/monitor_id'
+    get:
+      operationId: getMonitor
+      summary: Get a monitor
+      tags:
+      - Monitors
+      x-commons-tier: core
+      x-commons-share: 0.841
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteMonitor
+      summary: Delete a monitor
+      tags:
+      - Monitors
+      x-commons-tier: core
+      x-commons-share: 0.773
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateMonitor
+      summary: Update a monitor
+      tags:
+      - Monitors
+      x-commons-tier: core
+      x-commons-share: 0.659
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /alerts:
+    get:
+      operationId: listAlerts
+      summary: List alerts
+      tags:
+      - Alerts
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id002
+                  $ref: '#/components/schemas/Alert'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAlert
+      summary: Create an alert
+      tags:
+      - Alerts
+      x-commons-tier: extended
+      x-commons-share: 0.357
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /alerts/{alert_id}:
+    parameters:
+    - $ref: '#/components/parameters/alert_id'
+    get:
+      operationId: getAlert
+      summary: Get an alert
+      tags:
+      - Alerts
+      x-commons-tier: core
+      x-commons-share: 0.714
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteAlert
+      summary: Delete an alert
+      tags:
+      - Alerts
+      x-commons-tier: extended
+      x-commons-share: 0.429
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateAlert
+      summary: Update an alert
+      tags:
+      - Alerts
+      x-commons-tier: extended
+      x-commons-share: 0.286
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /dashboards:
+    get:
+      operationId: listDashboards
+      summary: List dashboards
+      tags:
+      - Dashboards
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Dashboard'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createDashboard
+      summary: Create a dashboard
+      tags:
+      - Dashboards
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /dashboards/{dashboard_id}:
+    parameters:
+    - $ref: '#/components/parameters/dashboard_id'
+    delete:
+      operationId: deleteDashboard
+      summary: Delete a dashboard
+      tags:
+      - Dashboards
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    get:
+      operationId: getDashboard
+      summary: Get a dashboard
+      tags:
+      - Dashboards
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateDashboard
+      summary: Update a dashboard
+      tags:
+      - Dashboards
+      x-commons-tier: core
+      x-commons-share: 0.929
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /logs:
+    get:
+      operationId: listLogs
+      summary: List logs
+      tags:
+      - Logs
+      x-commons-tier: core
+      x-commons-share: 0.66
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Log'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createLog
+      summary: Create a log
+      tags:
+      - Logs
+      x-commons-tier: extended
+      x-commons-share: 0.426
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /logs/{log_id}:
+    parameters:
+    - $ref: '#/components/parameters/log_id'
+    get:
+      operationId: getLog
+      summary: Get a log
+      tags:
+      - Logs
+      x-commons-tier: extended
+      x-commons-share: 0.298
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /metrics:
+    get:
+      operationId: listMetrics
+      summary: List metrics
+      tags:
+      - Metrics
+      x-commons-tier: core
+      x-commons-share: 0.7
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Metric'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createMetric
+      summary: Create a metric
+      tags:
+      - Metrics
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /metrics/{metric_id}:
+    parameters:
+    - $ref: '#/components/parameters/metric_id'
+    get:
+      operationId: getMetric
+      summary: Get a metric
+      tags:
+      - Metrics
+      x-commons-tier: extended
+      x-commons-share: 0.3
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+  /traces:
+    post:
+      operationId: createTrace
+      summary: Create a trace
+      tags:
+      - Traces
+      x-commons-tier: core
+      x-commons-share: 0.64
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id006
+                $ref: '#/components/schemas/Trace'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+    get:
+      operationId: listTraces
+      summary: List traces
+      tags:
+      - Traces
+      x-commons-tier: extended
+      x-commons-share: 0.48
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id006
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /traces/{trace_id}:
+    parameters:
+    - $ref: '#/components/parameters/trace_id'
+    get:
+      operationId: getTrace
+      summary: Get a trace
+      tags:
+      - Traces
+      x-commons-tier: extended
+      x-commons-share: 0.42
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+  /slos:
+    get:
+      operationId: listSlos
+      summary: List slos
+      tags:
+      - Slos
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id007
+                  $ref: '#/components/schemas/Slo'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSlo
+      summary: Create a slo
+      tags:
+      - Slos
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+  /slos/{slo_id}:
+    parameters:
+    - $ref: '#/components/parameters/slo_id'
+    delete:
+      operationId: deleteSlo
+      summary: Delete a slo
+      tags:
+      - Slos
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    get:
+      operationId: getSlo
+      summary: Get a slo
+      tags:
+      - Slos
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    patch:
+      operationId: updateSlo
+      summary: Update a slo
+      tags:
+      - Slos
+      x-commons-tier: core
+      x-commons-share: 0.857
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+components:
+  schemas:
+    Monitor:
+      $ref: ./schema/monitor.json
+    Alert:
+      $ref: ./schema/alert.json
+    Dashboard:
+      $ref: ./schema/dashboard.json
+    Log:
+      $ref: ./schema/log.json
+    Metric:
+      $ref: ./schema/metric.json
+    Trace:
+      $ref: ./schema/trace.json
+    Slo:
+      $ref: ./schema/slo.json
+  parameters:
+    monitor_id:
+      name: monitor_id
+      in: path
+      required: true
+      schema:
+        type: string
+    alert_id:
+      name: alert_id
+      in: path
+      required: true
+      schema:
+        type: string
+    dashboard_id:
+      name: dashboard_id
+      in: path
+      required: true
+      schema:
+        type: string
+    log_id:
+      name: log_id
+      in: path
+      required: true
+      schema:
+        type: string
+    metric_id:
+      name: metric_id
+      in: path
+      required: true
+      schema:
+        type: string
+    trace_id:
+      name: trace_id
+      in: path
+      required: true
+      schema:
+        type: string
+    slo_id:
+      name: slo_id
+      in: path
+      required: true
+      schema:
+        type: string

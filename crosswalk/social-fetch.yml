@@ -1,0 +1,28 @@
+provider: social-fetch
+apis_io: https://apis.io/providers/social-fetch/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      status: status
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/social-fetch-openapi.json#DELETE /v1/monitors/{id}
+    - openapi/_original/social-fetch-openapi.json#GET /v1/monitors
+    - openapi/_original/social-fetch-openapi.json#GET /v1/monitors/{id}
+    - openapi/_original/social-fetch-openapi.json#PATCH /v1/monitors/{id}
+    - openapi/_original/social-fetch-openapi.json#POST /v1/monitors
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/social-fetch-openapi.json#GET /v1/wikipedia/logs

@@ -1,0 +1,16 @@
+provider: sift-stack
+apis_io: https://apis.io/providers/sift-stack/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      created_at: createdDate
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sift-stack-openapi.json#DELETE /api/v1/annotations/{annotationId}/logs/{annotationLogId}
+    - openapi/_original/sift-stack-openapi.json#GET /api/v1/annotations/{annotationId}/logs
+    - openapi/_original/sift-stack-openapi.json#GET /api/v1/webhooks/logs
+    - openapi/_original/sift-stack-openapi.json#POST /api/v1/annotations/{annotationId}/logs

@@ -1,0 +1,605 @@
+context: observability
+generated: '2026-11-10'
+adopters:
+- provider: agenta
+  apis_io: https://apis.io/providers/agenta/
+  crosswalk: crosswalk/agenta.yml
+  concepts:
+  - trace
+- provider: agentgateway
+  apis_io: https://apis.io/providers/agentgateway/
+  crosswalk: crosswalk/agentgateway.yml
+  concepts:
+  - trace
+- provider: amazon-xray
+  apis_io: https://apis.io/providers/amazon-xray/
+  crosswalk: crosswalk/amazon-xray.yml
+  concepts:
+  - trace
+- provider: apache-zipkin
+  apis_io: https://apis.io/providers/apache-zipkin/
+  crosswalk: crosswalk/apache-zipkin.yml
+  concepts:
+  - trace
+- provider: apicontext
+  apis_io: https://apis.io/providers/apicontext/
+  crosswalk: crosswalk/apicontext.yml
+  concepts:
+  - metric
+  - monitor
+  - slo
+- provider: apitoolkit
+  apis_io: https://apis.io/providers/apitoolkit/
+  crosswalk: crosswalk/apitoolkit.yml
+  concepts:
+  - monitor
+- provider: archestra
+  apis_io: https://apis.io/providers/archestra/
+  crosswalk: crosswalk/archestra.yml
+  concepts:
+  - log
+- provider: arize-ai
+  apis_io: https://apis.io/providers/arize-ai/
+  crosswalk: crosswalk/arize-ai.yml
+  concepts:
+  - trace
+- provider: athina
+  apis_io: https://apis.io/providers/athina/
+  crosswalk: crosswalk/athina.yml
+  concepts:
+  - log
+  - trace
+- provider: atla
+  apis_io: https://apis.io/providers/atla/
+  crosswalk: crosswalk/atla.yml
+  concepts:
+  - trace
+- provider: aws-x-ray
+  apis_io: https://apis.io/providers/aws-x-ray/
+  crosswalk: crosswalk/aws-x-ray.yml
+  concepts:
+  - trace
+- provider: axiom-co
+  apis_io: https://apis.io/providers/axiom-co/
+  crosswalk: crosswalk/axiom-co.yml
+  concepts:
+  - dashboard
+  - monitor
+- provider: betterstack
+  apis_io: https://apis.io/providers/betterstack/
+  crosswalk: crosswalk/betterstack.yml
+  concepts:
+  - monitor
+- provider: betteruptime
+  apis_io: https://apis.io/providers/betteruptime/
+  crosswalk: crosswalk/betteruptime.yml
+  concepts:
+  - monitor
+- provider: bluejay
+  apis_io: https://apis.io/providers/bluejay/
+  crosswalk: crosswalk/bluejay.yml
+  concepts:
+  - alert
+  - dashboard
+  - log
+  - metric
+  - monitor
+  - trace
+- provider: bugsnag
+  apis_io: https://apis.io/providers/bugsnag/
+  crosswalk: crosswalk/bugsnag.yml
+  concepts:
+  - trace
+- provider: calyptia
+  apis_io: https://apis.io/providers/calyptia/
+  crosswalk: crosswalk/calyptia.yml
+  concepts:
+  - dashboard
+  - monitor
+  - slo
+- provider: cast-ai
+  apis_io: https://apis.io/providers/cast-ai/
+  crosswalk: crosswalk/cast-ai.yml
+  concepts:
+  - log
+- provider: checkly
+  apis_io: https://apis.io/providers/checkly/
+  crosswalk: crosswalk/checkly.yml
+  concepts:
+  - dashboard
+  - metric
+  - monitor
+- provider: choreo
+  apis_io: https://apis.io/providers/choreo/
+  crosswalk: crosswalk/choreo.yml
+  concepts:
+  - log
+- provider: chronosphere
+  apis_io: https://apis.io/providers/chronosphere/
+  crosswalk: crosswalk/chronosphere.yml
+  concepts:
+  - dashboard
+  - monitor
+  - slo
+- provider: cisco-catalyst-sdwan
+  apis_io: https://apis.io/providers/cisco-catalyst-sdwan/
+  crosswalk: crosswalk/cisco-catalyst-sdwan.yml
+  concepts:
+  - dashboard
+  - log
+  - monitor
+  - trace
+- provider: controlup
+  apis_io: https://apis.io/providers/controlup/
+  crosswalk: crosswalk/controlup.yml
+  concepts:
+  - log
+- provider: coval
+  apis_io: https://apis.io/providers/coval/
+  crosswalk: crosswalk/coval.yml
+  concepts:
+  - dashboard
+  - monitor
+  - trace
+- provider: cronitor
+  apis_io: https://apis.io/providers/cronitor/
+  crosswalk: crosswalk/cronitor.yml
+  concepts:
+  - metric
+  - monitor
+- provider: dash0
+  apis_io: https://apis.io/providers/dash0/
+  crosswalk: crosswalk/dash0.yml
+  concepts:
+  - log
+  - trace
+- provider: datadog
+  apis_io: https://apis.io/providers/datadog/
+  crosswalk: crosswalk/datadog.yml
+  concepts:
+  - log
+  - metric
+  - monitor
+- provider: deepchecks
+  apis_io: https://apis.io/providers/deepchecks/
+  crosswalk: crosswalk/deepchecks.yml
+  concepts:
+  - trace
+- provider: devtron
+  apis_io: https://apis.io/providers/devtron/
+  crosswalk: crosswalk/devtron.yml
+  concepts:
+  - log
+- provider: elastic-observability
+  apis_io: https://apis.io/providers/elastic-observability/
+  crosswalk: crosswalk/elastic-observability.yml
+  concepts:
+  - log
+  - trace
+- provider: elk-stack
+  apis_io: https://apis.io/providers/elk-stack/
+  crosswalk: crosswalk/elk-stack.yml
+  concepts:
+  - alert
+  - dashboard
+  - log
+  - monitor
+  - slo
+- provider: encore-dev
+  apis_io: https://apis.io/providers/encore-dev/
+  crosswalk: crosswalk/encore-dev.yml
+  concepts:
+  - trace
+- provider: fastly
+  apis_io: https://apis.io/providers/fastly/
+  crosswalk: crosswalk/fastly.yml
+  concepts:
+  - log
+- provider: freeplay
+  apis_io: https://apis.io/providers/freeplay/
+  crosswalk: crosswalk/freeplay.yml
+  concepts:
+  - trace
+- provider: galileo-technologies
+  apis_io: https://apis.io/providers/galileo-technologies/
+  crosswalk: crosswalk/galileo-technologies.yml
+  concepts:
+  - trace
+- provider: glitchtip
+  apis_io: https://apis.io/providers/glitchtip/
+  crosswalk: crosswalk/glitchtip.yml
+  concepts:
+  - alert
+  - log
+  - monitor
+  - trace
+- provider: google-cloud-trace
+  apis_io: https://apis.io/providers/google-cloud-trace/
+  crosswalk: crosswalk/google-cloud-trace.yml
+  concepts:
+  - trace
+- provider: graphiant
+  apis_io: https://apis.io/providers/graphiant/
+  crosswalk: crosswalk/graphiant.yml
+  concepts:
+  - log
+- provider: hamming-ai
+  apis_io: https://apis.io/providers/hamming-ai/
+  crosswalk: crosswalk/hamming-ai.yml
+  concepts:
+  - log
+  - trace
+- provider: highlight-io
+  apis_io: https://apis.io/providers/highlight-io/
+  crosswalk: crosswalk/highlight-io.yml
+  concepts:
+  - log
+  - trace
+- provider: humanloop
+  apis_io: https://apis.io/providers/humanloop/
+  crosswalk: crosswalk/humanloop.yml
+  concepts:
+  - log
+- provider: hyperping
+  apis_io: https://apis.io/providers/hyperping/
+  crosswalk: crosswalk/hyperping.yml
+  concepts:
+  - monitor
+- provider: influxdata
+  apis_io: https://apis.io/providers/influxdata/
+  crosswalk: crosswalk/influxdata.yml
+  concepts:
+  - dashboard
+  - log
+  - monitor
+  - trace
+- provider: instana
+  apis_io: https://apis.io/providers/instana/
+  crosswalk: crosswalk/instana.yml
+  concepts:
+  - alert
+  - log
+  - metric
+  - monitor
+  - slo
+  - trace
+- provider: isovalent
+  apis_io: https://apis.io/providers/isovalent/
+  crosswalk: crosswalk/isovalent.yml
+  concepts:
+  - log
+- provider: jaeger
+  apis_io: https://apis.io/providers/jaeger/
+  crosswalk: crosswalk/jaeger.yml
+  concepts:
+  - trace
+- provider: jaeger-io
+  apis_io: https://apis.io/providers/jaeger-io/
+  crosswalk: crosswalk/jaeger-io.yml
+  concepts:
+  - trace
+- provider: keep
+  apis_io: https://apis.io/providers/keep/
+  crosswalk: crosswalk/keep.yml
+  concepts:
+  - log
+- provider: kentik
+  apis_io: https://apis.io/providers/kentik/
+  crosswalk: crosswalk/kentik.yml
+  concepts:
+  - alert
+  - monitor
+  - trace
+- provider: keywordsai
+  apis_io: https://apis.io/providers/keywordsai/
+  crosswalk: crosswalk/keywordsai.yml
+  concepts:
+  - trace
+- provider: kibana
+  apis_io: https://apis.io/providers/kibana/
+  crosswalk: crosswalk/kibana.yml
+  concepts:
+  - alert
+  - log
+  - monitor
+  - slo
+- provider: kubeshop
+  apis_io: https://apis.io/providers/kubeshop/
+  crosswalk: crosswalk/kubeshop.yml
+  concepts:
+  - log
+- provider: langchain
+  apis_io: https://apis.io/providers/langchain/
+  crosswalk: crosswalk/langchain.yml
+  concepts:
+  - log
+  - trace
+- provider: langfuse
+  apis_io: https://apis.io/providers/langfuse/
+  crosswalk: crosswalk/langfuse.yml
+  concepts:
+  - trace
+- provider: langtrace
+  apis_io: https://apis.io/providers/langtrace/
+  crosswalk: crosswalk/langtrace.yml
+  concepts:
+  - trace
+- provider: langwatch
+  apis_io: https://apis.io/providers/langwatch/
+  crosswalk: crosswalk/langwatch.yml
+  concepts:
+  - alert
+  - dashboard
+  - metric
+  - monitor
+  - trace
+- provider: laravel
+  apis_io: https://apis.io/providers/laravel/
+  crosswalk: crosswalk/laravel.yml
+  concepts:
+  - log
+  - monitor
+- provider: latitude-so
+  apis_io: https://apis.io/providers/latitude-so/
+  crosswalk: crosswalk/latitude-so.yml
+  concepts:
+  - monitor
+  - trace
+- provider: launchdarkly
+  apis_io: https://apis.io/providers/launchdarkly/
+  crosswalk: crosswalk/launchdarkly.yml
+  concepts:
+  - log
+  - trace
+- provider: lightrun
+  apis_io: https://apis.io/providers/lightrun/
+  crosswalk: crosswalk/lightrun.yml
+  concepts:
+  - log
+- provider: logicmonitor
+  apis_io: https://apis.io/providers/logicmonitor/
+  crosswalk: crosswalk/logicmonitor.yml
+  concepts:
+  - log
+- provider: metaplane
+  apis_io: https://apis.io/providers/metaplane/
+  crosswalk: crosswalk/metaplane.yml
+  concepts:
+  - monitor
+- provider: moogsoft
+  apis_io: https://apis.io/providers/moogsoft/
+  crosswalk: crosswalk/moogsoft.yml
+  concepts:
+  - log
+- provider: nodeping
+  apis_io: https://apis.io/providers/nodeping/
+  crosswalk: crosswalk/nodeping.yml
+  concepts:
+  - monitor
+- provider: observeinc
+  apis_io: https://apis.io/providers/observeinc/
+  crosswalk: crosswalk/observeinc.yml
+  concepts:
+  - alert
+  - dashboard
+  - metric
+  - monitor
+- provider: openobserve
+  apis_io: https://apis.io/providers/openobserve/
+  crosswalk: crosswalk/openobserve.yml
+  concepts:
+  - log
+  - trace
+- provider: openstatus
+  apis_io: https://apis.io/providers/openstatus/
+  crosswalk: crosswalk/openstatus.yml
+  concepts:
+  - monitor
+- provider: opentelemetry
+  apis_io: https://apis.io/providers/opentelemetry/
+  crosswalk: crosswalk/opentelemetry.yml
+  concepts:
+  - log
+  - trace
+- provider: opik
+  apis_io: https://apis.io/providers/opik/
+  crosswalk: crosswalk/opik.yml
+  concepts:
+  - log
+  - trace
+- provider: opsgenie
+  apis_io: https://apis.io/providers/opsgenie/
+  crosswalk: crosswalk/opsgenie.yml
+  concepts:
+  - log
+- provider: oracle-cloud
+  apis_io: https://apis.io/providers/oracle-cloud/
+  crosswalk: crosswalk/oracle-cloud.yml
+  concepts:
+  - log
+- provider: pagerduty
+  apis_io: https://apis.io/providers/pagerduty/
+  crosswalk: crosswalk/pagerduty.yml
+  concepts:
+  - log
+- provider: phare
+  apis_io: https://apis.io/providers/phare/
+  crosswalk: crosswalk/phare.yml
+  concepts:
+  - alert
+  - monitor
+- provider: phoenix
+  apis_io: https://apis.io/providers/phoenix/
+  crosswalk: crosswalk/phoenix.yml
+  concepts:
+  - trace
+- provider: portkey
+  apis_io: https://apis.io/providers/portkey/
+  crosswalk: crosswalk/portkey.yml
+  concepts:
+  - log
+- provider: promptlayer
+  apis_io: https://apis.io/providers/promptlayer/
+  crosswalk: crosswalk/promptlayer.yml
+  concepts:
+  - trace
+- provider: relevance-ai
+  apis_io: https://apis.io/providers/relevance-ai/
+  crosswalk: crosswalk/relevance-ai.yml
+  concepts:
+  - metric
+  - monitor
+- provider: runwhen
+  apis_io: https://apis.io/providers/runwhen/
+  crosswalk: crosswalk/runwhen.yml
+  concepts:
+  - log
+- provider: sciencelogic
+  apis_io: https://apis.io/providers/sciencelogic/
+  crosswalk: crosswalk/sciencelogic.yml
+  concepts:
+  - alert
+  - log
+  - monitor
+  - trace
+- provider: scvd-store
+  apis_io: https://apis.io/providers/scvd-store/
+  crosswalk: crosswalk/scvd-store.yml
+  concepts:
+  - monitor
+- provider: seekr
+  apis_io: https://apis.io/providers/seekr/
+  crosswalk: crosswalk/seekr.yml
+  concepts:
+  - trace
+- provider: sentry-system
+  apis_io: https://apis.io/providers/sentry-system/
+  crosswalk: crosswalk/sentry-system.yml
+  concepts:
+  - alert
+  - dashboard
+  - monitor
+- provider: sift-stack
+  apis_io: https://apis.io/providers/sift-stack/
+  crosswalk: crosswalk/sift-stack.yml
+  concepts:
+  - log
+- provider: site24x7
+  apis_io: https://apis.io/providers/site24x7/
+  crosswalk: crosswalk/site24x7.yml
+  concepts:
+  - monitor
+- provider: social-fetch
+  apis_io: https://apis.io/providers/social-fetch/
+  crosswalk: crosswalk/social-fetch.yml
+  concepts:
+  - log
+  - monitor
+- provider: solarwinds
+  apis_io: https://apis.io/providers/solarwinds/
+  crosswalk: crosswalk/solarwinds.yml
+  concepts:
+  - monitor
+- provider: splunk
+  apis_io: https://apis.io/providers/splunk/
+  crosswalk: crosswalk/splunk.yml
+  concepts:
+  - monitor
+- provider: splunk-observability
+  apis_io: https://apis.io/providers/splunk-observability/
+  crosswalk: crosswalk/splunk-observability.yml
+  concepts:
+  - trace
+- provider: spyderbat
+  apis_io: https://apis.io/providers/spyderbat/
+  crosswalk: crosswalk/spyderbat.yml
+  concepts:
+  - log
+  - trace
+- provider: stack-moxie
+  apis_io: https://apis.io/providers/stack-moxie/
+  crosswalk: crosswalk/stack-moxie.yml
+  concepts:
+  - log
+- provider: sumo-logic
+  apis_io: https://apis.io/providers/sumo-logic/
+  crosswalk: crosswalk/sumo-logic.yml
+  concepts:
+  - dashboard
+  - metric
+  - monitor
+  - slo
+  - trace
+- provider: superlog
+  apis_io: https://apis.io/providers/superlog/
+  crosswalk: crosswalk/superlog.yml
+  concepts:
+  - log
+  - trace
+- provider: tempo
+  apis_io: https://apis.io/providers/tempo/
+  crosswalk: crosswalk/tempo.yml
+  concepts:
+  - trace
+- provider: thousandeyes
+  apis_io: https://apis.io/providers/thousandeyes/
+  crosswalk: crosswalk/thousandeyes.yml
+  concepts:
+  - alert
+  - dashboard
+  - log
+  - monitor
+- provider: uptime-com
+  apis_io: https://apis.io/providers/uptime-com/
+  crosswalk: crosswalk/uptime-com.yml
+  concepts:
+  - monitor
+- provider: uptimerobot
+  apis_io: https://apis.io/providers/uptimerobot/
+  crosswalk: crosswalk/uptimerobot.yml
+  concepts:
+  - alert
+  - monitor
+- provider: uselemma
+  apis_io: https://apis.io/providers/uselemma/
+  crosswalk: crosswalk/uselemma.yml
+  concepts:
+  - trace
+- provider: verifiable
+  apis_io: https://apis.io/providers/verifiable/
+  crosswalk: crosswalk/verifiable.yml
+  concepts:
+  - alert
+  - monitor
+- provider: vijil
+  apis_io: https://apis.io/providers/vijil/
+  crosswalk: crosswalk/vijil.yml
+  concepts:
+  - log
+  - trace
+- provider: waxell
+  apis_io: https://apis.io/providers/waxell/
+  crosswalk: crosswalk/waxell.yml
+  concepts:
+  - trace
+- provider: webscale-networks
+  apis_io: https://apis.io/providers/webscale-networks/
+  crosswalk: crosswalk/webscale-networks.yml
+  concepts:
+  - log
+  - monitor
+- provider: x402-list-api
+  apis_io: https://apis.io/providers/x402-list-api/
+  crosswalk: crosswalk/x402-list-api.yml
+  concepts:
+  - monitor
+- provider: zelto
+  apis_io: https://apis.io/providers/zelto/
+  crosswalk: crosswalk/zelto.yml
+  concepts:
+  - monitor
+- provider: zipkin
+  apis_io: https://apis.io/providers/zipkin/
+  crosswalk: crosswalk/zipkin.yml
+  concepts:
+  - trace

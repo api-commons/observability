@@ -1,0 +1,54 @@
+provider: checkly
+apis_io: https://apis.io/providers/checkly/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      name: name
+      id:
+      - checkId
+      - id
+      type: checkType
+      created_at: created_at
+      updated_at: updated_at
+      tags: tags
+      description: description
+      interval: frequency
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/checks/{id}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/triggers/checks/{checkId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/badges/checks/{checkId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/check-groups/{groupId}/checks/{checkId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/check-groups/{id}/checks
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      description: description
+      id:
+      - id
+      - dashboardId
+      created_at: created_at
+      tags: tags
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/dashboards/{dashboardId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/dashboards
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/dashboards/{dashboardId}
+    - openapi/_original/checkly-public-api-openapi.json#POST /v1/dashboards
+    - openapi/_original/checkly-public-api-openapi.json#PUT /v1/dashboards/{dashboardId}
+  metric:
+    path_segment:
+    - metrics
+    properties:
+      type: type
+      metric: name
+      unit: unit
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/analytics/metrics
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/private-locations/{id}/metrics

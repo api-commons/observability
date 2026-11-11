@@ -1,0 +1,15 @@
+provider: google-cloud-trace
+apis_io: https://apis.io/providers/google-cloud-trace/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: traceId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /v1/projects/{projectId}/traces
+    - openapi/_original/openapi.yml#GET /v1/projects/{projectId}/traces/{traceId}
+    - openapi/_original/openapi.yml#PATCH /v1/projects/{projectId}/traces

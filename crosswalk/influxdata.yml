@@ -1,0 +1,59 @@
+provider: influxdata
+apis_io: https://apis.io/providers/influxdata/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      name: name
+      id: id
+      status: status
+      type: type
+      created_at: createdAt
+      updated_at: updatedAt
+      tags:
+      - labels
+      - tags
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/influxdata-cloud-openapi-original.yml#DELETE /checks/{checkID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /checks
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /checks/{checkID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#PATCH /checks/{checkID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#POST /checks
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: name
+      description: description
+      id: id
+      tags: labels
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/influxdata-cloud-openapi-original.yml#DELETE /dashboards/{dashboardID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /dashboards
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /dashboards/{dashboardID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#PATCH /dashboards/{dashboardID}
+    - openapi/_original/influxdata-cloud-openapi-original.yml#POST /dashboards
+  log:
+    path_segment:
+    - logs
+    properties:
+      timestamp: time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /tasks/{taskID}/logs
+    - openapi/_original/influxdata-cloud-openapi-original.yml#GET /tasks/{taskID}/runs/{runID}/logs
+    - openapi/_original/influxdata-oss-openapi-original.yml#GET /tasks/{taskID}/logs
+    - openapi/_original/influxdata-oss-openapi-original.yml#GET /tasks/{taskID}/runs/{runID}/logs
+  trace:
+    path_segment:
+    - trace
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/influxdata-oss-openapi-original.yml#GET /debug/pprof/trace

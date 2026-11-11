@@ -1,0 +1,13 @@
+provider: runwhen
+apis_io: https://apis.io/providers/runwhen/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - log
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/runwhen-papi-openapi-original.json#GET /api/v1/workspaces/{workspace_name}/run-requests/{run_request_id}/log
+    - openapi/_original/runwhen-papi-openapi-original.json#GET /api/v3/workspaces/{workspace_name}/run-requests/{run_request_id}/log

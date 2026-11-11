@@ -1,0 +1,15 @@
+provider: graphiant
+apis_io: https://apis.io/providers/graphiant/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/graphiant-portal-openapi-original.json#POST /v1/activity/logs
+    - openapi/_original/graphiant-portal-openapi-original.json#POST /v1/audit/logs
+    - openapi/_original/graphiant-portal-openapi-original.json#POST /v1/logs
+    - openapi/_original/graphiant-portal-openapi-original.json#POST /v2/audit/logs

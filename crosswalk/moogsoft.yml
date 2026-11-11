@@ -1,0 +1,18 @@
+provider: moogsoft
+apis_io: https://apis.io/providers/moogsoft/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      timestamp: timestamp
+      level: level
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/moogsoft-collectors-openapi.yaml#GET /v2/collectors/{collectorId}/logs
+    - openapi/_original/moogsoft-collectors-openapi.yaml#POST /v2/collectors/{collectorId}/logs
+    - openapi/_original/moogsoft-webhook-service-v2-openapi.yaml#DELETE /v2/integrations/webhooks/logs/{id}
+    - openapi/_original/moogsoft-webhook-service-v2-openapi.yaml#GET /v2/integrations/webhooks/logs/{id}

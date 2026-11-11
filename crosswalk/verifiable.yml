@@ -1,0 +1,29 @@
+provider: verifiable
+apis_io: https://apis.io/providers/verifiable/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/verifiable-openapi-deprecated.json#DELETE /monitors/{id}
+    - openapi/_original/verifiable-openapi-deprecated.json#GET /monitors
+    - openapi/_original/verifiable-openapi-deprecated.json#GET /monitors/{id}
+    - openapi/_original/verifiable-openapi-deprecated.json#PATCH /monitors/{id}
+    - openapi/_original/verifiable-openapi-deprecated.json#POST /monitors
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/verifiable-openapi-deprecated.json#GET /alerts
+    - openapi/_original/verifiable-openapi-deprecated.json#GET /alerts/{alertId}
+    - openapi/_original/verifiable-openapi-original.json#GET /alerts
+    - openapi/_original/verifiable-openapi-original.json#GET /alerts/{alertId}

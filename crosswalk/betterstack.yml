@@ -1,0 +1,22 @@
+provider: betterstack
+apis_io: https://apis.io/providers/betterstack/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+      status: paused
+      type:
+      - type
+      - monitor_type
+      interval: check_frequency
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/betterstack-openapi.yml#DELETE /monitors/{id}
+    - openapi/_original/betterstack-openapi.yml#GET /monitors
+    - openapi/_original/betterstack-openapi.yml#GET /monitors/{id}
+    - openapi/_original/betterstack-openapi.yml#PATCH /monitors/{id}
+    - openapi/_original/betterstack-openapi.yml#POST /monitors

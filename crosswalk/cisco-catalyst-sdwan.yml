@@ -1,0 +1,39 @@
+provider: cisco-catalyst-sdwan
+apis_io: https://apis.io/providers/cisco-catalyst-sdwan/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitor
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /device/monitor
+    - openapi/_original/cisco-catalyst-sdwan-others-openapi.json#DELETE /url/monitor
+    - openapi/_original/cisco-catalyst-sdwan-others-openapi.json#GET /url/monitor
+    - openapi/_original/cisco-catalyst-sdwan-others-openapi.json#POST /url/monitor
+    - openapi/_original/cisco-catalyst-sdwan-others-openapi.json#PUT /url/monitor
+  dashboard:
+    path_segment:
+    - dashboard
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cisco-catalyst-sdwan-sd-wan-services-openapi.json#GET /multicloud/interconnect/dashboard
+  log:
+    path_segment:
+    - log
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /device/crashlog/log
+    - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /stream/device/log/{sessionId}
+    - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#POST /stream/device/log
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cisco-catalyst-sdwan-monitoring-and-troubleshooting-openapi.json#GET /stream/device/nwpi/tasks/{taskId}/traces

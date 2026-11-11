@@ -1,0 +1,77 @@
+provider: sumo-logic
+apis_io: https://apis.io/providers/sumo-logic/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      type: type
+      created_at: createdAt
+      updated_at: modifiedAt
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/sumo-logic-openapi.yml#DELETE /v1/monitors
+    - openapi/_original/sumo-logic-openapi.yml#DELETE /v1/monitors/{id}
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/monitors
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/monitors/{id}
+    - openapi/_original/sumo-logic-openapi.yml#POST /v1/monitors
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: title
+      description: description
+      id: id
+      widgets:
+      - panels
+      - layout
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/sumo-logic-openapi.yml#DELETE /v2/dashboards/{id}
+    - openapi/_original/sumo-logic-openapi.yml#GET /v2/dashboards
+    - openapi/_original/sumo-logic-openapi.yml#GET /v2/dashboards/{id}
+    - openapi/_original/sumo-logic-openapi.yml#POST /v2/dashboards
+    - openapi/_original/sumo-logic-openapi.yml#PUT /v2/dashboards/{id}
+  metric:
+    path_segment:
+    - metrics
+    properties:
+      type: type
+      metric: metric
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/tracing/metrics
+  trace:
+    path_segment:
+    - traces
+    - spans
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/tracing/spanquery/{queryId}/rows/{rowId}/spans
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/tracing/tracequery/{queryId}/rows/{rowId}/traces
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/tracing/traces/{traceId}
+  slo:
+    path_segment:
+    - slos
+    properties:
+      created_at: createdAt
+      name: name
+      description: description
+      updated_at: modifiedAt
+      id: id
+      version: version
+    core_coverage: 0.714
+    evidence:
+    - openapi/_original/sumo-logic-openapi.yml#DELETE /v1/slos
+    - openapi/_original/sumo-logic-openapi.yml#DELETE /v1/slos/{id}
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/slos
+    - openapi/_original/sumo-logic-openapi.yml#GET /v1/slos/{id}
+    - openapi/_original/sumo-logic-openapi.yml#POST /v1/slos

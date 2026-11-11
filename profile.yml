@@ -1,0 +1,1010 @@
+context: observability
+name: Observability
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Observability
+  - Monitoring
+  - APM
+  - Application Performance Monitoring
+  - Logging
+  - Log Management
+  - Metrics
+  - Tracing
+  - Uptime Monitoring
+  - Infrastructure Monitoring
+  providers_with_harvested_openapi: 279
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  monitor:
+    adslighthouse: ad-compliance checks
+    fastly: /domain/{name}/check is a DNS configuration check
+  dashboard:
+    ninjaone: /ticketing/trigger/boards are ticket boards
+    social-fetch: Pinterest boards
+  metric:
+    social-fetch: prediction-market series
+duplicates:
+  grafana:
+  - grafana-com
+  honeycomb:
+  - honeycomb-io
+  catchpoint:
+  - catchpoint-systems
+shared_specs: {}
+concepts:
+  monitor:
+    segments_seen:
+      monitors: 31
+      checks: 8
+      monitor: 6
+      healthchecks: 1
+      synthetics: 1
+      probes: 1
+    providers_exposing: 44
+    providers_with_readable_schema: 44
+    operations:
+    - operation: GET collection
+      providers: 42
+      share: 0.955
+      tier: core
+    - operation: GET item
+      providers: 37
+      share: 0.841
+      tier: core
+    - operation: POST collection
+      providers: 35
+      share: 0.795
+      tier: core
+    - operation: DELETE item
+      providers: 34
+      share: 0.773
+      tier: core
+    - operation: UPDATE item
+      providers: 29
+      share: 0.659
+      tier: core
+    - operation: POST item
+      providers: 5
+      share: 0.114
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 4
+      share: 0.091
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.068
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 31
+      share: 0.705
+      type: string
+      spellings:
+      - name
+      - label
+      - display_name
+    - name: id
+      tier: core
+      providers: 29
+      share: 0.659
+      type: string
+      spellings:
+      - id
+      - monitor_id
+      - checkId
+      - uuid
+      - monitorId
+    - name: status
+      tier: core
+      providers: 24
+      share: 0.545
+      type: boolean
+      spellings:
+      - status
+      - enabled
+      - paused
+      - state
+      - active
+      - health
+    - name: type
+      tier: core
+      providers: 24
+      share: 0.545
+      type: string
+      spellings:
+      - type
+      - monitor_type
+      - checkType
+      - monitorType
+      - check_type
+    - name: created_at
+      tier: extended
+      providers: 20
+      share: 0.455
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+      - create_time
+      - dateCreated
+    - name: updated_at
+      tier: extended
+      providers: 16
+      share: 0.364
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - updated
+      - update_time
+      - modified
+      - modifiedAt
+    - name: tags
+      tier: extended
+      providers: 15
+      share: 0.341
+      type: array
+      spellings:
+      - tags
+      - labels
+      - tag_ids
+    - name: description
+      tier: extended
+      providers: 14
+      share: 0.318
+      type: string
+      spellings:
+      - description
+      - note
+    - name: interval
+      tier: extended
+      providers: 14
+      share: 0.318
+      type: integer
+      spellings:
+      - interval
+      - check_frequency
+      - frequency
+      - period
+      - Period
+      - intervalSeconds
+    long_tail_count: 436
+    long_tail_sample:
+    - thresholds
+    - timeout
+    - metadata
+    - regions
+    - schedule
+    - slug
+    - locations
+    - notify
+    - port
+    - query
+    - request
+    - config
+    - created_by
+    - deleted
+    - disabled
+    - params
+    - private_locations
+    - project
+    - project_id
+    - scope
+    - service_name
+    - url
+    - actions
+    - alert
+    - annotations
+    - assertions
+    - baseline
+    - bucket_slug
+    - call
+    - collection
+    - collection_slug
+    - confirmation_period
+    - create_if_missing
+    - domain_expiration
+    - dry_run
+    - email
+    - environments
+    - expected_status_codes
+    - grace_period
+    - graphite_query
+  alert:
+    segments_seen:
+      alerts: 12
+      alert-rules: 2
+      alert: 1
+      triggers: 1
+    providers_exposing: 14
+    providers_with_readable_schema: 14
+    operations:
+    - operation: GET collection
+      providers: 13
+      share: 0.929
+      tier: core
+    - operation: GET item
+      providers: 10
+      share: 0.714
+      tier: core
+    - operation: DELETE item
+      providers: 6
+      share: 0.429
+      tier: extended
+    - operation: POST collection
+      providers: 5
+      share: 0.357
+      tier: extended
+    - operation: UPDATE item
+      providers: 4
+      share: 0.286
+      tier: extended
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.214
+      tier: extended
+    - operation: DELETE collection
+      providers: 1
+      share: 0.071
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.071
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 11
+      share: 0.786
+      type: string
+      spellings:
+      - id
+      - alertId
+    - name: status
+      tier: core
+      providers: 8
+      share: 0.571
+      type: string
+      spellings:
+      - status
+      - active
+      - Enabled
+      - state
+    - name: created_at
+      tier: extended
+      providers: 6
+      share: 0.429
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - dateCreated
+    - name: name
+      tier: extended
+      providers: 6
+      share: 0.429
+      type: string
+      spellings:
+      - name
+      - title
+    - name: description
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: string
+      spellings:
+      - description
+      - details
+    - name: updated_at
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - dateModified
+    long_tail_count: 126
+    long_tail_sample:
+    - alert_type
+    - attached_at
+    - entity_type
+    - filters
+    - index
+    - monitor_id
+    - severity
+    - timestamp
+    - totals
+    - action
+    - action_params
+    - agents
+    - aggregate
+    - aggregation
+    - ai_chats
+    - alert_channel_names
+    - alert_name
+    - alert_recipients
+    - alert_rule_id
+    - alert_severity
+    - alert_state
+    - api_links
+    - application_names
+    - applies_to_all_agents
+    - automatic_investigation
+    - captured_values
+    - channel_type
+    - comments
+    - comparison_value
+    - context
+    - created_by
+    - custom_graph_id
+    - custom_payload_fields
+    - dataset
+    - date_end
+    - date_start
+    - deleted
+    - deleted_alert_id
+    - detected_end
+    - detected_start
+  dashboard:
+    segments_seen:
+      dashboards: 13
+      dashboard: 2
+      boards: 1
+    providers_exposing: 14
+    providers_with_readable_schema: 13
+    operations:
+    - operation: GET collection
+      providers: 14
+      share: 1.0
+      tier: core
+    - operation: DELETE item
+      providers: 13
+      share: 0.929
+      tier: core
+    - operation: GET item
+      providers: 13
+      share: 0.929
+      tier: core
+    - operation: POST collection
+      providers: 13
+      share: 0.929
+      tier: core
+    - operation: UPDATE item
+      providers: 13
+      share: 0.929
+      tier: core
+    properties:
+    - name: name
+      tier: core
+      providers: 11
+      share: 0.846
+      type: string
+      spellings:
+      - name
+      - title
+      - display_name
+    - name: description
+      tier: core
+      providers: 9
+      share: 0.692
+      type: string
+      spellings:
+      - description
+    - name: id
+      tier: core
+      providers: 9
+      share: 0.692
+      type: string
+      spellings:
+      - id
+      - dashboardId
+    - name: created_at
+      tier: core
+      providers: 8
+      share: 0.615
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - create_time
+      - dateCreated
+    - name: updated_at
+      tier: extended
+      providers: 6
+      share: 0.462
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - update_time
+      - modifiedDate
+    - name: widgets
+      tier: extended
+      providers: 5
+      share: 0.385
+      type: array
+      spellings:
+      - layout
+      - widgets
+      - charts
+      - panels
+    - name: created_by
+      tier: extended
+      providers: 4
+      share: 0.308
+      type: object
+      spellings:
+      - createdBy
+      - created_by
+    - name: tags
+      tier: extended
+      providers: 4
+      share: 0.308
+      type: object
+      spellings:
+      - labels
+      - tags
+    long_tail_count: 101
+    long_tail_sample:
+    - collection
+    - collection_slug
+    - create_if_missing
+    - dashboard_json
+    - definition
+    - dry_run
+    - is_private
+    - refresh_rate
+    - slug
+    - account_id
+    - agent_id
+    - aid
+    - api_link
+    - cells
+    - checks_per_page
+    - col_span
+    - config
+    - connections
+    - content_id
+    - custom_css
+    - custom_domain
+    - custom_url
+    - dashboard_created_by
+    - dashboard_modified_by
+    - dashboard_modified_date
+    - data_type
+    - default_timespan
+    - devices
+    - domain
+    - edge_account_id
+    - edge_account_name
+    - edge_gateway_id
+    - edge_gateway_name
+    - edge_type
+    - enable_incidents
+    - expand_checks
+    - favicon
+    - folder_id
+    - global_filter_id
+    - global_override
+  log:
+    segments_seen:
+      logs: 39
+      log: 10
+      log_entries: 1
+    providers_exposing: 47
+    providers_with_readable_schema: 37
+    operations:
+    - operation: GET collection
+      providers: 31
+      share: 0.66
+      tier: core
+    - operation: POST collection
+      providers: 20
+      share: 0.426
+      tier: extended
+    - operation: GET item
+      providers: 14
+      share: 0.298
+      tier: extended
+    - operation: DELETE item
+      providers: 6
+      share: 0.128
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.021
+      tier: long-tail
+    properties:
+    - name: id
+      tier: extended
+      providers: 11
+      share: 0.297
+      type: string
+      spellings:
+      - id
+      - _id
+      - ID
+      - ObjectID
+      - uuid
+    - name: created_at
+      tier: extended
+      providers: 10
+      share: 0.27
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - Created
+      - createdDate
+    - name: timestamp
+      tier: extended
+      providers: 10
+      share: 0.27
+      type: string
+      spellings:
+      - timestamp
+      - time
+      - occurredAt
+      - timestampMs
+    - name: level
+      tier: extended
+      providers: 9
+      share: 0.243
+      type: string
+      spellings:
+      - level
+      - severity
+      - logLevel
+      - Level
+    - name: status
+      tier: extended
+      providers: 9
+      share: 0.243
+      type: string
+      spellings:
+      - status
+      - enabled
+      - state
+    long_tail_count: 203
+    long_tail_sample:
+    - message
+    - metadata
+    - source
+    - updated_at
+    - query
+    - type
+    - action
+    - description
+    - offset
+    - bytes_sent
+    - fields
+    - filename
+    - limit
+    - output
+    - partial_success
+    - path
+    - request
+    - resource
+    - response
+    - run_id
+    - schema_url
+    - scope_logs
+    - size
+    - stream
+    - thread_id
+    - user_id
+    - user_name
+    - acknowledgement_timeout
+    - action_type
+    - activity
+    - add_to_annotation_queue
+    - add_to_dataset
+    - additional_info
+    - address
+    - agent
+    - agent_log_item_type
+    - agent_name
+    - agent_pool_id
+    - agent_registration_uid
+    - agent_uid
+  metric:
+    segments_seen:
+      metrics: 8
+      timeseries: 3
+      series: 2
+    providers_exposing: 10
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 0.7
+      tier: core
+    - operation: POST collection
+      providers: 5
+      share: 0.5
+      tier: core
+    - operation: GET item
+      providers: 3
+      share: 0.3
+      tier: extended
+    - operation: DELETE item
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: type
+      tier: core
+      providers: 5
+      share: 0.556
+      type: string
+      spellings:
+      - type
+    - name: metric
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - name
+      - metric
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - description
+    - name: metrics
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: array
+      spellings:
+      - metrics
+    - name: unit
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - unit
+    long_tail_count: 96
+    long_tail_sample:
+    - end_date
+    - filters
+    - from
+    - host
+    - id
+    - metadata
+    - name
+    - query
+    - rollup
+    - start_date
+    - tags
+    - added_count
+    - added_metric_ids
+    - adjusted_timeframe
+    - agent_ids
+    - aggregate
+    - aggregated
+    - aggregations
+    - beacon_types
+    - bucket_granularity
+    - cardinality
+    - category
+    - children
+    - columns
+    - config_id
+    - correlation_tags
+    - cross_series_aggregations
+    - current_period
+    - custom_tags
+    - dataset
+    - default_aggregation
+    - disable_default_groups
+    - empty
+    - entities
+    - evaluate_conversations
+    - evaluation_count
+    - evaluation_triggered
+    - exclude_origins
+    - format
+    - formatter
+  trace:
+    segments_seen:
+      traces: 38
+      spans: 12
+      trace: 11
+    providers_exposing: 50
+    providers_with_readable_schema: 42
+    operations:
+    - operation: POST collection
+      providers: 32
+      share: 0.64
+      tier: core
+    - operation: GET collection
+      providers: 24
+      share: 0.48
+      tier: extended
+    - operation: GET item
+      providers: 21
+      share: 0.42
+      tier: extended
+    - operation: DELETE item
+      providers: 5
+      share: 0.1
+      tier: long-tail
+    - operation: UPDATE item
+      providers: 3
+      share: 0.06
+      tier: long-tail
+    - operation: POST item
+      providers: 2
+      share: 0.04
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.04
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.02
+      tier: long-tail
+    properties:
+    - name: id
+      tier: extended
+      providers: 17
+      share: 0.405
+      type: string
+      spellings:
+      - id
+      - Id
+    - name: trace_id
+      tier: extended
+      providers: 17
+      share: 0.405
+      type: string
+      spellings:
+      - trace_id
+      - traceId
+      - traceID
+    - name: name
+      tier: extended
+      providers: 14
+      share: 0.333
+      type: string
+      spellings:
+      - name
+      - label
+    - name: metadata
+      tier: extended
+      providers: 12
+      share: 0.286
+      type: object
+      spellings:
+      - metadata
+      - attributes
+    - name: start_time
+      tier: extended
+      providers: 9
+      share: 0.214
+      type: string
+      spellings:
+      - start_time
+      - startTime
+    long_tail_count: 285
+    long_tail_sample:
+    - end_time
+    - parent_span_id
+    - project_id
+    - duration
+    - resource_spans
+    - service
+    - tags
+    - input
+    - output
+    - partial_success
+    - session_id
+    - created_at
+    - kind
+    - metrics
+    - started_at
+    - thread_id
+    - timestamp
+    - trace_ids
+    - annotations
+    - environment
+    - op
+    - project_name
+    - schema_url
+    - scope_spans
+    - span_id
+    - status
+    - updated_at
+    - user_id
+    - agent_name
+    - batches
+    - debug
+    - description
+    - endpoint
+    - error_code
+    - error_count
+    - events
+    - latency
+    - local_endpoint
+    - order
+    - page_size
+  slo:
+    segments_seen:
+      slos: 5
+      slo: 2
+    providers_exposing: 7
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: DELETE item
+      providers: 6
+      share: 0.857
+      tier: core
+    - operation: GET item
+      providers: 6
+      share: 0.857
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.857
+      tier: core
+    - operation: DELETE collection
+      providers: 2
+      share: 0.286
+      tier: long-tail
+    properties:
+    - name: created_at
+      tier: core
+      providers: 7
+      share: 1.0
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+      - createdDate
+    - name: name
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - name
+    - name: description
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - description
+      - summary
+    - name: sli
+      tier: core
+      providers: 5
+      share: 0.714
+      type: object
+      spellings:
+      - indicator
+      - sli
+    - name: tags
+      tier: core
+      providers: 5
+      share: 0.714
+      type: array
+      spellings:
+      - tags
+      - labels
+    - name: updated_at
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - modifiedAt
+    - name: id
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - id
+    - name: target
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: object
+      spellings:
+      - objective
+      - target
+    - name: version
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: number
+      spellings:
+      - version
+    - name: window
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: object
+      spellings:
+      - timeWindow
+    long_tail_count: 34
+    long_tail_sample:
+    - annotations
+    - artifacts
+    - budgeting_method
+    - collection_ref
+    - create_if_missing
+    - definition
+    - dry_run
+    - group_by
+    - instance_id
+    - notification_policy_slug
+    - revision
+    - settings
+    - signal_grouping
+    - slug
+    - status
+    - content_type
+    - created_by
+    - entity
+    - exclude_tags
+    - include_tags
+    - is_mutable
+    - is_system
+    - items
+    - last_update
+    - last_updated
+    - modified_by
+    - page_size
+    - parent_id
+    - permissions
+    - project_id
+    - rbac_tags
+    - thresholds
+    - total_hits
+    - type

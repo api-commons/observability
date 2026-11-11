@@ -1,0 +1,15 @@
+provider: controlup
+apis_io: https://apis.io/providers/controlup/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      id: id
+      level: severity
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/controlup-daas-iq-openapi.yml#GET /jobs/{jobId}/logs
+    - openapi/_original/daas-iq.json#GET /jobs/{jobId}/logs

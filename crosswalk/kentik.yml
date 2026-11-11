@@ -1,0 +1,37 @@
+provider: kentik
+apis_io: https://apis.io/providers/kentik/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      status: status
+      tags: labels
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/kentik-bgp-monitoring-openapi.json#DELETE /bgp_monitoring/v202210/monitors/{id}
+    - openapi/_original/kentik-bgp-monitoring-openapi.json#GET /bgp_monitoring/v202210/monitors
+    - openapi/_original/kentik-bgp-monitoring-openapi.json#GET /bgp_monitoring/v202210/monitors/{id}
+    - openapi/_original/kentik-bgp-monitoring-openapi.json#POST /bgp_monitoring/v202210/monitors
+    - openapi/_original/kentik-bgp-monitoring-openapi.json#PUT /bgp_monitoring/v202210/monitors/{id}
+  alert:
+    path_segment:
+    - alerts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kentik-alerting-openapi.json#GET /v202505/alerts/{id}
+    - openapi/_original/kentik-alerting-openapi.json#POST /v202505/alerts
+  trace:
+    path_segment:
+    - trace
+    properties:
+      id: id
+      start_time: startTime
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kentik-synthetics-openapi.json#POST /synthetics/v202309/trace

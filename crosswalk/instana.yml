@@ -1,0 +1,92 @@
+provider: instana
+apis_io: https://apis.io/providers/instana/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - synthetics
+    properties:
+      name: name
+      id: id
+      status: enabled
+      created_at: created
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/instana-openapi.yml#DELETE /api/events/settings/global-alert-configs/synthetics/{id}
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/global-alert-configs/synthetics
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/global-alert-configs/synthetics/{id}
+    - openapi/_original/instana-openapi.yml#POST /api/events/settings/global-alert-configs/synthetics
+    - openapi/_original/instana-openapi.yml#POST /api/events/settings/global-alert-configs/synthetics/{id}
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/instana-openapi.yml#DELETE /api/events/settings/alerts/{id}
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/alerts
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/alerts/{id}
+    - openapi/_original/instana-openapi.yml#PUT /api/events/settings/alerts/{id}
+  log:
+    path_segment:
+    - logs
+    properties:
+      id: id
+      created_at: created
+      level: severity
+      status: enabled
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/instana-openapi.yml#DELETE /api/events/settings/global-alert-configs/logs/{id}
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/global-alert-configs/logs
+    - openapi/_original/instana-openapi.yml#GET /api/events/settings/global-alert-configs/logs/{id}
+    - openapi/_original/instana-openapi.yml#GET /api/host-agent/{hostId}/logs
+    - openapi/_original/instana-openapi.yml#POST /api/events/settings/global-alert-configs/logs
+  metric:
+    path_segment:
+    - metrics
+    properties:
+      type: type
+      description: description
+      metrics: metrics
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/instana-openapi.yml#GET /api/application-monitoring/catalog/metrics
+    - openapi/_original/instana-openapi.yml#GET /api/infrastructure-monitoring/catalog/metrics/{plugin}
+    - openapi/_original/instana-openapi.yml#GET /api/mobile-app-monitoring/catalog/metrics
+    - openapi/_original/instana-openapi.yml#GET /api/synthetics/catalog/metrics
+    - openapi/_original/instana-openapi.yml#GET /api/website-monitoring/catalog/metrics
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: id
+      name:
+      - label
+      - name
+      start_time: startTime
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/instana-openapi.yml#GET /api/application-monitoring/v2/analyze/traces/{id}
+    - openapi/_original/instana-openapi.yml#POST /api/application-monitoring/analyze/traces
+  slo:
+    path_segment:
+    - slo
+    properties:
+      created_at: createdDate
+      name: name
+      sli: indicator
+      tags: tags
+      id: id
+      target: target
+      window: timeWindow
+    core_coverage: 0.714
+    evidence:
+    - openapi/_original/instana-openapi.yml#DELETE /api/settings/slo/{id}
+    - openapi/_original/instana-openapi.yml#GET /api/settings/slo
+    - openapi/_original/instana-openapi.yml#GET /api/settings/slo/{id}
+    - openapi/_original/instana-openapi.yml#POST /api/settings/slo
+    - openapi/_original/instana-openapi.yml#PUT /api/settings/slo/{id}

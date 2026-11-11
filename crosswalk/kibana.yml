@@ -1,0 +1,65 @@
+provider: kibana
+apis_io: https://apis.io/providers/kibana/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      status: enabled
+      type: type
+      tags:
+      - labels
+      - tags
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/kibana-openapi-original.yml#DELETE /api/synthetics/monitors/{id}
+    - openapi/_original/kibana-openapi-original.yml#GET /api/synthetics/monitors
+    - openapi/_original/kibana-openapi-original.yml#GET /api/synthetics/monitors/{id}
+    - openapi/_original/kibana-openapi-original.yml#POST /api/synthetics/monitors
+    - openapi/_original/kibana-openapi-original.yml#PUT /api/synthetics/monitors/{id}
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      name: title
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibana-openapi-original.yml#GET /api/cases/alerts/{alertId}
+    - openapi/_original/kibana-openapi-original.yml#GET /api/cases/{caseId}/alerts
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/kibana-openapi-original.yml#GET /api/workflows/executions/{executionId}/logs
+  slo:
+    path_segment:
+    - slos
+    properties:
+      created_at: createdAt
+      name: name
+      description:
+      - description
+      - summary
+      sli: indicator
+      tags: tags
+      updated_at: updatedAt
+      id: id
+      target: objective
+      version: version
+      window: timeWindow
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibana-openapi-original.yml#DELETE /s/{spaceId}/api/observability/slos/{sloId}
+    - openapi/_original/kibana-openapi-original.yml#GET /s/{spaceId}/api/observability/slos
+    - openapi/_original/kibana-openapi-original.yml#GET /s/{spaceId}/api/observability/slos/{sloId}
+    - openapi/_original/kibana-openapi-original.yml#POST /s/{spaceId}/api/observability/slos
+    - openapi/_original/kibana-openapi-original.yml#PUT /s/{spaceId}/api/observability/slos/{sloId}

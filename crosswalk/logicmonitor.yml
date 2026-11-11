@@ -1,0 +1,15 @@
+provider: logicmonitor
+apis_io: https://apis.io/providers/logicmonitor/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/logicmonitor-rest-api-v3-swagger.json#GET /setting/collector/collectors/{collectorId}/logs
+    - openapi/_original/logicmonitor-rest-api-v3-swagger.json#GET /setting/collector/collectors/{collectorId}/logs/{fileName}
+    - openapi/_original/logicmonitor-rest-api-v3-swagger_2.json#GET /setting/collector/collectors/{collectorId}/logs
+    - openapi/_original/logicmonitor-rest-api-v3-swagger_2.json#GET /setting/collector/collectors/{collectorId}/logs/{fileName}

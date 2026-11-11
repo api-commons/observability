@@ -1,0 +1,14 @@
+provider: amazon-xray
+apis_io: https://apis.io/providers/amazon-xray/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: Id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amazon-xray-openapi-original.yaml#POST /Traces
+    - openapi/_original/amazon-xray-openapi.yml#POST /Traces

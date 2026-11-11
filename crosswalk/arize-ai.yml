@@ -1,0 +1,12 @@
+provider: arize-ai
+apis_io: https://apis.io/providers/arize-ai/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/arize-ai-openapi.yml#POST /v1/traces

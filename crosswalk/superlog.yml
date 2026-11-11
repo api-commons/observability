@@ -1,0 +1,19 @@
+provider: superlog
+apis_io: https://apis.io/providers/superlog/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/superlog-management-openapi.json#GET /api/v1/projects/{projectId}/logs
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/superlog-management-openapi.json#GET /api/v1/projects/{projectId}/traces/{traceId}

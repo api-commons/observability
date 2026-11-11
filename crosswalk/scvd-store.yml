@@ -1,0 +1,13 @@
+provider: scvd-store
+apis_io: https://apis.io/providers/scvd-store/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      description: note
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/scvd-store-openapi.json#GET /api/preflight/checks

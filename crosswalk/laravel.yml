@@ -1,0 +1,31 @@
+provider: laravel
+apis_io: https://apis.io/providers/laravel/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}/monitors/{monitor}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/monitors
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/monitors/{monitor}
+    - openapi/_original/laravel-forge-openapi.json#POST /orgs/{organization}/servers/{server}/monitors
+  log:
+    path_segment:
+    - logs
+    - log
+    properties:
+      id: id
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/laravel-forge-openapi.json#DELETE /orgs/{organization}/servers/{server}/logs/{key}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/background-processes/{backgroundProcess}/log
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/logs/{key}
+    - openapi/_original/laravel-forge-openapi.json#GET /orgs/{organization}/servers/{server}/sites/{site}/deployments/{deployment}/log
+    - openapi/_original/laravel-openapi.json#GET /deployments/{deployment}/logs

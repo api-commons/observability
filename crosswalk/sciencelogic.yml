@@ -1,0 +1,46 @@
+provider: sciencelogic
+apis_io: https://apis.io/providers/sciencelogic/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      interval: Period
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /devices/{id}/monitors
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      status: Enabled
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /settings/alerts
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#PUT /settings/alerts
+  log:
+    path_segment:
+    - logs
+    - log
+    properties:
+      id:
+      - ID
+      - ObjectID
+      created_at: Created
+      level: Level
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#DELETE /settings/appliance/debug/log
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /agents/{id}/debug/log
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /logs
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /logs/{id}
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /settings/appliance/debug/log
+  trace:
+    path_segment:
+    - trace
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /settings/appliance/trace

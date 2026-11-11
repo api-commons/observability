@@ -1,0 +1,45 @@
+provider: coval
+apis_io: https://apis.io/providers/coval/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      status: status
+      created_at: create_time
+      updated_at: update_time
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/coval-monitors-openapi.yml#DELETE /monitors/{monitor_id}
+    - openapi/_original/coval-monitors-openapi.yml#GET /monitors
+    - openapi/_original/coval-monitors-openapi.yml#GET /monitors/{monitor_id}
+    - openapi/_original/coval-monitors-openapi.yml#PATCH /monitors/{monitor_id}
+    - openapi/_original/coval-monitors-openapi.yml#POST /monitors
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name:
+      - name
+      - display_name
+      description: description
+      created_at: create_time
+      updated_at: update_time
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/coval-dashboards-openapi.yml#DELETE /dashboards/{dashboard_id}
+    - openapi/_original/coval-dashboards-openapi.yml#GET /dashboards
+    - openapi/_original/coval-dashboards-openapi.yml#GET /dashboards/{dashboard_id}
+    - openapi/_original/coval-dashboards-openapi.yml#PATCH /dashboards/{dashboard_id}
+    - openapi/_original/coval-dashboards-openapi.yml#POST /dashboards
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/coval-traces-openapi.yml#POST /traces

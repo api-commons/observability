@@ -1,0 +1,19 @@
+provider: openobserve
+apis_io: https://apis.io/providers/openobserve/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/openobserve-openapi.json#POST /rum/v1/{org_id}/logs
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/openobserve-openapi.json#POST /api/{org_id}/v1/traces

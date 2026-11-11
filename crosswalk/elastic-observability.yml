@@ -1,0 +1,19 @@
+provider: elastic-observability
+apis_io: https://apis.io/providers/elastic-observability/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/elastic-observability-observability-intake-openapi.yml#POST /v1/logs
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/elastic-observability-observability-intake-openapi.yml#POST /v1/traces

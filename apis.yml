@@ -1,0 +1,63 @@
+aid: common-observability
+name: Observability
+type: Common
+description: 'The common Observability vocabulary, distilled from the harvested OpenAPI of 279 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Observability
+- Monitoring
+- APM
+- Application Performance Monitoring
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/observability/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-observability:observability
+  name: Common Observability Interface
+  description: The Observability interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/observability
+  tags:
+  - Observability
+  - Monitoring
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/observability/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/observability/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/observability/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: monitor
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/monitor.json
+  - type: JSONSchema
+    name: alert
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/alert.json
+  - type: JSONSchema
+    name: dashboard
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/dashboard.json
+  - type: JSONSchema
+    name: log
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/log.json
+  - type: JSONSchema
+    name: metric
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/metric.json
+  - type: JSONSchema
+    name: trace
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/trace.json
+  - type: JSONSchema
+    name: slo
+    url: https://raw.githubusercontent.com/api-commons/observability/main/schema/slo.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/observability/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,26 @@
+provider: athina
+apis_io: https://apis.io/providers/athina/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/athina-openapi.yml#PUT /logs/{log_id}
+  trace:
+    path_segment:
+    - trace
+    properties:
+      id: id
+      name: name
+      metadata: attributes
+      start_time: start_time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/athina-openapi.yml#GET /trace/{trace_id}
+    - openapi/_original/athina-openapi.yml#POST /trace/
+    - openapi/_original/athina-openapi.yml#PUT /trace/{trace_id}

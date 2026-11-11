@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/observability/main/schema/metric.json",
+  "title": "Metric",
+  "description": "The common metric in Observability, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.556,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "metric": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "name",
+        "metric"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "metrics": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "metrics"
+      ]
+    },
+    "unit": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "unit"
+      ]
+    }
+  },
+  "required": [],
+  "x-commons": {
+    "context": "observability",
+    "concept": "metric",
+    "providers": 9,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,13 @@
+provider: freeplay
+apis_io: https://apis.io/providers/freeplay/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: trace_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/freeplay-openapi.json#POST /api/v2/projects/{project_id}/search/traces

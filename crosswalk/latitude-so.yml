@@ -1,0 +1,36 @@
+provider: latitude-so
+apis_io: https://apis.io/providers/latitude-so/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    - monitor
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/latitude-so-openapi.json#DELETE /v1/projects/{projectSlug}/monitors/{monitorSlug}
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/monitors
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/monitors/{monitorSlug}
+    - openapi/_original/latitude-so-openapi.json#PATCH /v1/projects/{projectSlug}/monitors/{monitorSlug}
+    - openapi/_original/latitude-so-openapi.json#POST /v1/projects/{projectSlug}/monitors
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: traceId
+      metadata: metadata
+      start_time: startTime
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/searches/{searchSlug}/traces
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/sessions/{sessionId}/traces
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/signals/{signalSlug}/traces
+    - openapi/_original/latitude-so-openapi.json#GET /v1/projects/{projectSlug}/traces/{traceId}
+    - openapi/_original/latitude-so-openapi.json#POST /v1/projects/{projectSlug}/datasets/{datasetSlug}/rows/import/traces

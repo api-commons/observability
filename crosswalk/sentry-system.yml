@@ -1,0 +1,55 @@
+provider: sentry-system
+apis_io: https://apis.io/providers/sentry-system/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      status: status
+      type: type
+      created_at: dateCreated
+      interval: intervalSeconds
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sentry-crons-openapi.yml#DELETE /organizations/{organization_id_or_slug}/monitors/{monitor_id_or_slug}/
+    - openapi/_original/sentry-crons-openapi.yml#DELETE /projects/{organization_id_or_slug}/{project_id_or_slug}/monitors/{monitor_id_or_slug}/
+    - openapi/_original/sentry-crons-openapi.yml#GET /organizations/{organization_id_or_slug}/monitors/
+    - openapi/_original/sentry-crons-openapi.yml#GET /organizations/{organization_id_or_slug}/monitors/{monitor_id_or_slug}/
+    - openapi/_original/sentry-crons-openapi.yml#GET /projects/{organization_id_or_slug}/{project_id_or_slug}/monitors/{monitor_id_or_slug}/
+  alert:
+    path_segment:
+    - alerts
+    - alert-rules
+    properties:
+      id: id
+      status: status
+      created_at: dateCreated
+      name: name
+      updated_at: dateModified
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sentry-alerts-openapi.yml#DELETE /organizations/{organization_id_or_slug}/alert-rules/{alert_rule_id}/
+    - openapi/_original/sentry-alerts-openapi.yml#GET /organizations/{organization_id_or_slug}/alert-rules/
+    - openapi/_original/sentry-alerts-openapi.yml#GET /organizations/{organization_id_or_slug}/alert-rules/{alert_rule_id}/
+    - openapi/_original/sentry-alerts-openapi.yml#POST /organizations/{organization_id_or_slug}/alert-rules/
+    - openapi/_original/sentry-alerts-openapi.yml#PUT /organizations/{organization_id_or_slug}/alert-rules/{alert_rule_id}/
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: title
+      id: id
+      created_at: dateCreated
+      widgets: widgets
+      created_by: createdBy
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/sentry-dashboards-openapi.yml#DELETE /organizations/{organization_id_or_slug}/dashboards/{dashboard_id}/
+    - openapi/_original/sentry-dashboards-openapi.yml#GET /organizations/{organization_id_or_slug}/dashboards/
+    - openapi/_original/sentry-dashboards-openapi.yml#GET /organizations/{organization_id_or_slug}/dashboards/{dashboard_id}/
+    - openapi/_original/sentry-dashboards-openapi.yml#POST /organizations/{organization_id_or_slug}/dashboards/
+    - openapi/_original/sentry-dashboards-openapi.yml#PUT /organizations/{organization_id_or_slug}/dashboards/{dashboard_id}/

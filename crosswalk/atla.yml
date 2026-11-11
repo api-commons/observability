@@ -1,0 +1,15 @@
+provider: atla
+apis_io: https://apis.io/providers/atla/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: id
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/atla-insights-openapi.yaml#GET /api/sdk/v1/traces
+    - openapi/_original/atla-insights-openapi.yaml#GET /api/sdk/v1/traces/{traceId}

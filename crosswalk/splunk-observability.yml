@@ -1,0 +1,12 @@
+provider: splunk-observability
+apis_io: https://apis.io/providers/splunk-observability/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - trace
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/splunk-observability-ingest-data-openapi.yml#POST /trace

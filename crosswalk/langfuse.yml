@@ -1,0 +1,19 @@
+provider: langfuse
+apis_io: https://apis.io/providers/langfuse/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: id
+      name: name
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/langfuse-openapi.yml#DELETE /api/public/traces
+    - openapi/_original/langfuse-openapi.yml#DELETE /api/public/traces/{traceId}
+    - openapi/_original/langfuse-openapi.yml#GET /api/public/traces
+    - openapi/_original/langfuse-openapi.yml#GET /api/public/traces/{traceId}
+    - openapi/_original/langfuse-openapi.yml#POST /api/public/otel/v1/traces

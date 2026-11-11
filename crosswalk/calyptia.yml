@@ -1,0 +1,52 @@
+provider: calyptia
+apis_io: https://apis.io/providers/calyptia/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      tags: labels
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/calyptia-openapi.yml#DELETE /api/v1/config/monitors/{slug}
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/monitors
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/monitors/{slug}
+    - openapi/_original/calyptia-openapi.yml#POST /api/v1/config/monitors
+    - openapi/_original/calyptia-openapi.yml#PUT /api/v1/config/monitors/{slug}
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      tags: labels
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/calyptia-openapi.yml#DELETE /api/v1/config/dashboards/{slug}
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/dashboards
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/dashboards/{slug}
+    - openapi/_original/calyptia-openapi.yml#POST /api/v1/config/dashboards
+    - openapi/_original/calyptia-openapi.yml#PUT /api/v1/config/dashboards/{slug}
+  slo:
+    path_segment:
+    - slos
+    properties:
+      created_at: created_at
+      name: name
+      description: description
+      sli: sli
+      tags: labels
+      updated_at: updated_at
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/calyptia-openapi.yml#DELETE /api/v1/config/slos/{slug}
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/slos
+    - openapi/_original/calyptia-openapi.yml#GET /api/v1/config/slos/{slug}
+    - openapi/_original/calyptia-openapi.yml#POST /api/v1/config/slos
+    - openapi/_original/calyptia-openapi.yml#PUT /api/v1/config/slos/{slug}

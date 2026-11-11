@@ -1,0 +1,111 @@
+context: observability
+name: Observability
+intro: >-
+  The common observability vocabulary -- the monitors and checks that watch a system, the
+  alerts they raise, the logs, metrics and traces they read, the dashboards that show them
+  and the SLOs that judge them -- distilled from the APIs that already exist. The incidents
+  people respond to belong to the incident-management context.
+tags: [Observability, Monitoring, APM, Application Performance Monitoring, Logging, Log Management, Metrics, Tracing, Uptime Monitoring, Infrastructure Monitoring]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page, object, url]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, monitor_id, check_id]
+  created_at: [created, created_date, date_created, create_time, creation_date, created_on, creation_time]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, modified, modification_time]
+  metadata: [meta_data, custom_fields, custom, attributes, properties]
+  status: [state, overall_state, health, health_status, monitor_status, enabled, paused, active]
+  name: [title, display_name, label]
+  description: [message, notes, note, details, summary]
+  tags: [labels, tag_ids, tag_list]
+  query: [expression, promql, query_string, filter, condition, conditions, nrql, search]
+  timestamp: [time, ts, occurred_at, date, datetime, timestamp_ms, received_at]
+
+concepts:
+  monitor:
+    # Singular /check is a verb (licensing check, invitation check); only checks counts.
+    segments: [monitors, monitor, checks, uptime_checks, uptime-checks, synthetics, healthchecks, health_checks, probes]
+    aliases:
+      type: [monitor_type, check_type, kind]
+      interval: [frequency, check_frequency, interval_seconds, period, check_interval]
+      url: [target, host, endpoint, address, hostname]
+      thresholds: [threshold, options, critical, warning, criteria]
+      notify: [notification_channels, contacts, alert_contacts, recipients, notification_channel_ids, escalation_policy]
+  alert:
+    requires: [monitor]
+    segments: [alerts, alert, alert_rules, alert-rules, alertrules, alert_policies, alert-policies, notifications@monitors, triggers]
+    aliases:
+      severity: [priority, level, alert_level]
+      triggered_at: [started_at, fired_at, start_time, opened_at, created]
+      resolved_at: [ended_at, closed_at, end_time, recovered_at]
+      monitor_id: [monitor, check_id, rule_id, policy_id, source]
+  dashboard:
+    requires: [monitor]
+    segments: [dashboards, dashboard, boards, screenboards]
+    aliases:
+      widgets: [panels, tiles, charts, cards, layout]
+      is_shared: [shared, is_public, public]
+  log:
+    segments: [logs, log, log_entries, log-entries, logevents, log_events]
+    aliases:
+      message: [msg, body, content, text, log, line]
+      level: [severity, log_level, status_level]
+      source: [service, host, hostname, logger, source_name]
+  metric:
+    segments: [metrics@query|series|timeseries|v1|v2|api, timeseries, series, datapoints, metric_data]
+    requires: [monitor]
+    aliases:
+      metric: [metric_name, name, measurement]
+      points: [values, datapoints, data_points, pointlist, samples]
+      unit: [units]
+      interval: [step, granularity, resolution]
+  trace:
+    segments: [traces, trace, spans, span]
+    aliases:
+      trace_id: [traceId, trace]
+      span_id: [spanId]
+      parent_span_id: [parentSpanId, parent_id]
+      service: [service_name, serviceName, resource]
+      duration: [duration_ms, duration_ns, elapsed]
+  slo:
+    requires: [monitor]
+    segments: [slos, slo, service_level_objectives, service-level-objectives, objectives]
+    aliases:
+      target: [target_percentage, objective, threshold, target_threshold]
+      window: [time_window, timeframe, rolling_period, period]
+      sli: [indicator, sli_spec, query]
+
+exclude:
+  monitor:
+    adslighthouse: ad-compliance checks
+    fastly: /domain/{name}/check is a DNS configuration check
+  dashboard:
+    ninjaone: /ticketing/trigger/boards are ticket boards
+    social-fetch: Pinterest boards
+  metric:
+    social-fetch: prediction-market series
+duplicates:
+  grafana: [grafana-com]
+  honeycomb: [honeycomb-io]
+  catchpoint: [catchpoint-systems]
+
+findings:
+  - "A monitor agrees on name, id, status and type: uptime checks, synthetic tests and metric
+    monitors share the identity of a watcher even where their thresholds differ."
+  - "An SLO agrees almost completely -- name, description, its indicator, tags and dates -- the
+    newest concept here and the most standardised."
+  - "Logs and traces agree on nothing as resources: several are OpenTelemetry payloads (resource
+    spans, log records) whose shape lives in the OTLP standard, and others are
+    LLM-observability traces with a different shape again. OTLP deserves its own pass, as
+    Open Banking did."
+decisions:
+  - "Incidents belong to incident management; observability ends at the alert."
+  - "A monitor covers checks, uptime checks, synthetics and probes; singular `/check` is an
+    action and does not count."
+  - "Alert rules, alert policies and triggers are alerts (the rule and its firing are not yet
+    separated -- too few providers expose both)."
+  - "Metrics count only beneath a query, series or versioned API path; a bare `/metrics` is a
+    Prometheus scrape endpoint or a usage counter almost everywhere."
+  - "Duplicates merged: Grafana, Honeycomb, Catchpoint."

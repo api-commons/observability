@@ -1,0 +1,22 @@
+provider: nodeping
+apis_io: https://apis.io/providers/nodeping/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      name: label
+      status: enabled
+      type: type
+      tags: tags
+      description: description
+      interval: interval
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nodeping-openapi.yml#DELETE /checks/{checkid}
+    - openapi/_original/nodeping-openapi.yml#GET /checks
+    - openapi/_original/nodeping-openapi.yml#GET /checks/{checkid}
+    - openapi/_original/nodeping-openapi.yml#POST /checks
+    - openapi/_original/nodeping-openapi.yml#PUT /checks/{checkid}

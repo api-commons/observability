@@ -1,0 +1,22 @@
+provider: phoenix
+apis_io: https://apis.io/providers/phoenix/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - spans
+    - traces
+    properties:
+      id: id
+      trace_id: trace_id
+      name: name
+      metadata: attributes
+      start_time: start_time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/phoenix-rest-api-openapi.yml#DELETE /v1/spans/{span_identifier}
+    - openapi/_original/phoenix-rest-api-openapi.yml#DELETE /v1/traces/{trace_identifier}
+    - openapi/_original/phoenix-rest-api-openapi.yml#GET /v1/projects/{project_identifier}/spans
+    - openapi/_original/phoenix-rest-api-openapi.yml#GET /v1/projects/{project_identifier}/traces
+    - openapi/_original/phoenix-rest-api-openapi.yml#POST /v1/projects/{project_identifier}/spans

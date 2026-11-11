@@ -1,0 +1,20 @@
+provider: openstatus
+apis_io: https://apis.io/providers/openstatus/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitor
+    properties:
+      name: name
+      id: id
+      status: active
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/openstatus-openapi.yml#DELETE /monitor/{id}
+    - openapi/_original/openstatus-openapi.yml#GET /monitor
+    - openapi/_original/openstatus-openapi.yml#GET /monitor/{id}
+    - openapi/_original/openstatus-openapi.yml#POST /monitor
+    - openapi/_original/openstatus-openapi.yml#PUT /monitor/{id}

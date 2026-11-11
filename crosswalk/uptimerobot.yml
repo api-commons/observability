@@ -1,0 +1,29 @@
+provider: uptimerobot
+apis_io: https://apis.io/providers/uptimerobot/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+      status: status
+      type: type
+      tags: tags
+      interval: interval
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/uptimerobot-openapi.yaml#DELETE /monitors/{id}
+    - openapi/_original/uptimerobot-openapi.yaml#GET /monitors
+    - openapi/_original/uptimerobot-openapi.yaml#GET /monitors/{id}
+    - openapi/_original/uptimerobot-openapi.yaml#PATCH /monitors/{id}
+    - openapi/_original/uptimerobot-openapi.yaml#POST /monitors
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/uptimerobot-openapi.yaml#GET /incidents/{id}/alerts

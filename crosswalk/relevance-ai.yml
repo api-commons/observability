@@ -1,0 +1,23 @@
+provider: relevance-ai
+apis_io: https://apis.io/providers/relevance-ai/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/relevance-ai-openapi.json#GET /evals/{resource_type}/{resource_id}/pre-publish/checks
+  metric:
+    path_segment:
+    - timeseries
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/relevance-ai-openapi.json#POST /analytics/agent/breakdown/timeseries
+    - openapi/_original/relevance-ai-openapi.json#POST /analytics/agent/timeseries
+    - openapi/_original/relevance-ai-openapi.json#POST /analytics/project/timeseries
+    - openapi/_original/relevance-ai-openapi.json#POST /analytics/tool/breakdown/timeseries
+    - openapi/_original/relevance-ai-openapi.json#POST /analytics/tool/timeseries

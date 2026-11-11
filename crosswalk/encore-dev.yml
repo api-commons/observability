@@ -1,0 +1,13 @@
+provider: encore-dev
+apis_io: https://apis.io/providers/encore-dev/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: trace_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/encore-platform-openapi.yml#GET /apps/{app_id}/traces

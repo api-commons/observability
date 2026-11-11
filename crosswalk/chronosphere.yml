@@ -1,0 +1,52 @@
+provider: chronosphere
+apis_io: https://apis.io/providers/chronosphere/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      tags: labels
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/chronosphere-config-v1-openapi3.json#DELETE /api/v1/config/monitors/{slug}
+    - openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/monitors
+    - openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/monitors/{slug}
+    - openapi/_original/chronosphere-config-v1-openapi3.json#POST /api/v1/config/monitors
+    - openapi/_original/chronosphere-config-v1-openapi3.json#PUT /api/v1/config/monitors/{slug}
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      tags: labels
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/chronosphere-config-unstable-swagger.json#DELETE /api/unstable/config/dashboards/{slug}
+    - openapi/_original/chronosphere-config-unstable-swagger.json#GET /api/unstable/config/dashboards
+    - openapi/_original/chronosphere-config-unstable-swagger.json#GET /api/unstable/config/dashboards/{slug}
+    - openapi/_original/chronosphere-config-unstable-swagger.json#POST /api/unstable/config/dashboards
+    - openapi/_original/chronosphere-config-unstable-swagger.json#PUT /api/unstable/config/dashboards/{slug}
+  slo:
+    path_segment:
+    - slos
+    properties:
+      created_at: created_at
+      name: name
+      description: description
+      sli: sli
+      tags: labels
+      updated_at: updated_at
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/chronosphere-config-v1-openapi3.json#DELETE /api/v1/config/slos/{slug}
+    - openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/slos
+    - openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/slos/{slug}
+    - openapi/_original/chronosphere-config-v1-openapi3.json#POST /api/v1/config/slos
+    - openapi/_original/chronosphere-config-v1-openapi3.json#PUT /api/v1/config/slos/{slug}

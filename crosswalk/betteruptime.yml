@@ -1,0 +1,21 @@
+provider: betteruptime
+apis_io: https://apis.io/providers/betteruptime/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      id: id
+      type:
+      - type
+      - monitor_type
+      interval: check_frequency
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#DELETE /monitors/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#GET /monitors
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#GET /monitors/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#PATCH /monitors/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#POST /monitors

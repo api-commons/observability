@@ -1,0 +1,17 @@
+provider: seekr
+apis_io: https://apis.io/providers/seekr/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - spans
+    properties:
+      trace_id: trace_id
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/seekr-agents-openapi-original.json#GET /v1/observability/spans/{span_id}
+    - openapi/_original/seekr-agents-openapi-original.json#POST /v1/observability/spans
+    - openapi/_original/seekr-agents-openapi.json#GET /v1/observability/spans/{span_id}
+    - openapi/_original/seekr-agents-openapi.json#POST /v1/observability/spans

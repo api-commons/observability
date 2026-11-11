@@ -1,0 +1,20 @@
+provider: zipkin
+apis_io: https://apis.io/providers/zipkin/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - spans
+    - traces
+    - trace
+    properties:
+      id: id
+      trace_id: traceId
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zipkin-api-v2.yml#GET /api/v2/spans
+    - openapi/_original/zipkin-api-v2.yml#GET /api/v2/trace/{traceId}
+    - openapi/_original/zipkin-api-v2.yml#GET /api/v2/traces
+    - openapi/_original/zipkin-api-v2.yml#POST /api/v2/spans

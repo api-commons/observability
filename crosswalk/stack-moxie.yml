@@ -1,0 +1,17 @@
+provider: stack-moxie
+apis_io: https://apis.io/providers/stack-moxie/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - log
+    properties:
+      id:
+      - id
+      - uuid
+      created_at: createdAt
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/stack-moxie-openapi.json#GET /v1/organizations/{org}/scenarios/{scenarioId}/runs/{runId}/log/{id}
+    - openapi/_original/stack-moxie-rest-api-openapi.yml#GET /v1/organizations/{org}/scenarios/{scenarioId}/runs/{runId}/log/{id}

@@ -1,0 +1,52 @@
+provider: glitchtip
+apis_io: https://apis.io/providers/glitchtip/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      type: monitorType
+      created_at: created
+      interval: interval
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/glitchtip-openapi.json#DELETE /api/0/organizations/{organization_slug}/monitors/{monitor_id}/
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/monitors/
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/monitors/{monitor_id}/
+    - openapi/_original/glitchtip-openapi.json#POST /api/0/organizations/{organization_slug}/monitors/
+    - openapi/_original/glitchtip-openapi.json#PUT /api/0/organizations/{organization_slug}/monitors/{monitor_id}/
+  alert:
+    path_segment:
+    - alerts
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/glitchtip-openapi.json#DELETE /api/0/projects/{organization_slug}/{project_slug}/alerts/{alert_id}/
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/projects/{organization_slug}/{project_slug}/alerts/
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/users/{user_id}/notifications/alerts/
+    - openapi/_original/glitchtip-openapi.json#POST /api/0/projects/{organization_slug}/{project_slug}/alerts/
+    - openapi/_original/glitchtip-openapi.json#PUT /api/0/projects/{organization_slug}/{project_slug}/alerts/{alert_id}/
+  log:
+    path_segment:
+    - logs
+    properties:
+      id: id
+      timestamp: timestamp
+      level: level
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/logs/
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/logs/{log_id}/
+  trace:
+    path_segment:
+    - spans
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/glitchtip-openapi.json#GET /api/0/organizations/{organization_slug}/transaction-groups/{id}/spans/

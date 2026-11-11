@@ -1,0 +1,37 @@
+provider: axiom-co
+apis_io: https://apis.io/providers/axiom-co/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      type: type
+      description: description
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/axiom-co-openapi.yml#DELETE /v2/monitors/{id}
+    - openapi/_original/axiom-co-openapi.yml#GET /v2/monitors
+    - openapi/_original/axiom-co-openapi.yml#GET /v2/monitors/{id}
+    - openapi/_original/axiom-co-openapi.yml#POST /v2/monitors
+    - openapi/_original/axiom-co-openapi.yml#PUT /v2/monitors/{id}
+  dashboard:
+    path_segment:
+    - dashboards
+    properties:
+      name: name
+      description: description
+      id: id
+      widgets:
+      - charts
+      - layout
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/axiom-co-openapi.yml#DELETE /v2/dashboards/{id}
+    - openapi/_original/axiom-co-openapi.yml#GET /v2/dashboards
+    - openapi/_original/axiom-co-openapi.yml#GET /v2/dashboards/{id}
+    - openapi/_original/axiom-co-openapi.yml#POST /v2/dashboards
+    - openapi/_original/axiom-co-openapi.yml#PUT /v2/dashboards/{id}

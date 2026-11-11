@@ -1,0 +1,13 @@
+provider: aws-x-ray
+apis_io: https://apis.io/providers/aws-x-ray/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      id: Id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/aws-x-ray-openapi.yml#POST /Traces

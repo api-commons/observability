@@ -1,0 +1,14 @@
+provider: choreo
+apis_io: https://apis.io/providers/choreo/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      timestamp: timestamp
+      level: level
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/choreo-insights-openapi.yml#GET /logs

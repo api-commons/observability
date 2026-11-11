@@ -1,0 +1,20 @@
+provider: launchdarkly
+apis_io: https://apis.io/providers/launchdarkly/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/launchdarkly-openapi.json#GET /api/v2/usage/observability/logs
+  trace:
+    path_segment:
+    - traces
+    properties:
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/launchdarkly-openapi.json#GET /api/v2/usage/observability/traces

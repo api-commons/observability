@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/observability/main/schema/monitor.json",
+  "title": "Monitor",
+  "description": "The common monitor in Observability, distilled from 44 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.705,
+      "x-commons-providers": 31,
+      "x-commons-spellings": [
+        "name",
+        "label",
+        "display_name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.659,
+      "x-commons-providers": 29,
+      "x-commons-spellings": [
+        "id",
+        "monitor_id",
+        "checkId",
+        "uuid",
+        "monitorId"
+      ]
+    },
+    "status": {
+      "type": "boolean",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.545,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "status",
+        "enabled",
+        "paused",
+        "state",
+        "active",
+        "health"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.545,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "type",
+        "monitor_type",
+        "checkType",
+        "monitorType",
+        "check_type"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created",
+        "create_time",
+        "dateCreated"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "updated",
+        "update_time",
+        "modified",
+        "modifiedAt"
+      ],
+      "format": "date-time"
+    },
+    "tags": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.341,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "tags",
+        "labels",
+        "tag_ids"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.318,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "description",
+        "note"
+      ]
+    },
+    "interval": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.318,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "interval",
+        "check_frequency",
+        "frequency",
+        "period",
+        "Period",
+        "intervalSeconds"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "observability",
+    "concept": "monitor",
+    "providers": 44,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

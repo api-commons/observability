@@ -1,0 +1,17 @@
+provider: kubeshop
+apis_io: https://apis.io/providers/kubeshop/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      status: status
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kubeshop-testkube-agent-openapi-original.yml#GET /executions/{id}/logs
+    - openapi/_original/kubeshop-testkube-control-plane-openapi-original.yml#GET /organizations/{id}/environments/{environmentID}/executions/{executionID}/logs
+    - openapi/_original/kubeshop-testkube-control-plane-openapi-original.yml#GET /organizations/{id}/environments/{environmentID}/test-workflow-executions/{executionID}/logs
+    - openapi/_original/kubeshop-testkube-control-plane-openapi-original.yml#GET /organizations/{id}/environments/{environmentId}/agent/executions/{id}/logs
+    - openapi/_original/kubeshop-testkube-openapi-original.yml#GET /executions/{id}/logs

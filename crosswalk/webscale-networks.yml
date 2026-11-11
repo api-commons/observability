@@ -1,0 +1,36 @@
+provider: webscale-networks
+apis_io: https://apis.io/providers/webscale-networks/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: monitor_id
+      status: state
+      type: type
+      updated_at: updated
+      tags: labels
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#DELETE /monitors/{id}
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /monitors
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /monitors/{id}
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#PATCH /monitors/{id}
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#POST /monitors
+  log:
+    path_segment:
+    - logs
+    properties:
+      created_at: created
+      level: severity
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /applications/{id}/logs
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /ssh-hosts/{id}/logs
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#GET /tasks/{id}/logs
+    - openapi/_original/webscale-networks-webscale-apis-openapi.json#POST /applications/{id}/logs
+    - openapi/_original/webscale-networks-webscale-apis-openapi_2.json#GET /applications/{id}/logs

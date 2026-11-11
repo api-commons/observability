@@ -1,0 +1,14 @@
+provider: jaeger
+apis_io: https://apis.io/providers/jaeger/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: traceID
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/jaeger-query-api.yml#GET /api/traces
+    - openapi/_original/jaeger-query-api.yml#GET /api/traces/{traceID}

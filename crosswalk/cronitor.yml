@@ -1,0 +1,29 @@
+provider: cronitor
+apis_io: https://apis.io/providers/cronitor/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      status: paused
+      type: type
+      created_at: created
+      tags: tags
+      description: note
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/cronitor-openapi.json#DELETE /api/monitors
+    - openapi/_original/cronitor-openapi.json#DELETE /api/monitors/{code}
+    - openapi/_original/cronitor-openapi.json#GET /api/monitors
+    - openapi/_original/cronitor-openapi.json#GET /api/monitors/{code}
+    - openapi/_original/cronitor-openapi.json#POST /api/monitors
+  metric:
+    path_segment:
+    - metrics
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/cronitor-openapi.json#GET /api/metrics

@@ -1,0 +1,14 @@
+provider: x402-list-api
+apis_io: https://apis.io/providers/x402-list-api/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/x402-list-api-openapi.json#GET /checks
+    - openapi/_original/x402-list-api-openapi.json#GET /services/{slug}/checks

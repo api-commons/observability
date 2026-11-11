@@ -1,0 +1,12 @@
+provider: tempo
+apis_io: https://apis.io/providers/tempo/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tempo-openapi.yml#GET /api/traces/{traceID}

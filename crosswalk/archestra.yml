@@ -1,0 +1,14 @@
+provider: archestra
+apis_io: https://apis.io/providers/archestra/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - log
+    properties:
+      id: id
+      timestamp: occurredAt
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/archestra-openapi.json#GET /api/connected-clients/log

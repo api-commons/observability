@@ -1,0 +1,23 @@
+provider: spyderbat
+apis_io: https://apis.io/providers/spyderbat/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - log
+    properties:
+      timestamp: time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/spyderbat-openapi-original.json#GET /api/v1/org/{orgUID}/agent_registration/{uid}/log
+    - openapi/_original/spyderbat-openapi.json#GET /api/v1/org/{orgUID}/agent_registration/{uid}/log
+  trace:
+    path_segment:
+    - trace
+    properties:
+      name: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/spyderbat-openapi-original.json#POST /api/v1/org/{orgUID}/suppress/trace
+    - openapi/_original/spyderbat-openapi.json#POST /api/v1/org/{orgUID}/suppress/trace

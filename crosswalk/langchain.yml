@@ -1,0 +1,29 @@
+provider: langchain
+apis_io: https://apis.io/providers/langchain/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      id: id
+      created_at: created_at
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/langchain-openapi.json#DELETE /api/v1/repos/{owner}/{repo}/optimization-jobs/{job_id}/logs/{log_id}
+    - openapi/_original/langchain-openapi.json#GET /api/v1/repos/{owner}/{repo}/optimization-jobs/{job_id}/logs
+    - openapi/_original/langchain-openapi.json#GET /api/v1/repos/{owner}/{repo}/optimization-jobs/{job_id}/logs/{log_id}
+    - openapi/_original/langchain-openapi.json#GET /api/v1/runs/rules/{rule_id}/logs
+    - openapi/_original/langchain-openapi.json#POST /api/v1/repos/{owner}/{repo}/optimization-jobs/{job_id}/logs
+  trace:
+    path_segment:
+    - traces
+    properties:
+      trace_id: trace_id
+      name: name
+      start_time: start_time
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/langchain-openapi.json#GET /v2/threads/{thread_id}/traces
+    - openapi/_original/langchain-openapi.json#POST /api/v1/runs/delete/traces

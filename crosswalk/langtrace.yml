@@ -1,0 +1,14 @@
+provider: langtrace
+apis_io: https://apis.io/providers/langtrace/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - trace
+    - traces
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/langtrace-openapi.yml#POST /trace
+    - openapi/_original/langtrace-openapi.yml#POST /traces

@@ -1,0 +1,18 @@
+provider: splunk
+apis_io: https://apis.io/providers/splunk/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitor
+    properties:
+      name: name
+      updated_at: updated
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/splunk-enterprise-rest-api.yml#DELETE /services/data/inputs/monitor/{name}
+    - openapi/_original/splunk-enterprise-rest-api.yml#GET /services/data/inputs/monitor
+    - openapi/_original/splunk-enterprise-rest-api.yml#GET /services/data/inputs/monitor/{name}
+    - openapi/_original/splunk-enterprise-rest-api.yml#POST /services/data/inputs/monitor
+    - openapi/_original/splunk-enterprise-rest-api.yml#POST /services/data/inputs/monitor/{name}

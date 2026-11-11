@@ -1,0 +1,19 @@
+provider: uptime-com
+apis_io: https://apis.io/providers/uptime-com/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - checks
+    properties:
+      name: name
+      status: state
+      type: check_type
+      tags: tags
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/uptime-com-openapi.yml#DELETE /checks/{pk}/
+    - openapi/_original/uptime-com-openapi.yml#GET /checks/
+    - openapi/_original/uptime-com-openapi.yml#GET /checks/{pk}/
+    - openapi/_original/uptime-com-openapi.yml#PATCH /checks/{pk}/

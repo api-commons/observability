@@ -1,0 +1,17 @@
+provider: jaeger-io
+apis_io: https://apis.io/providers/jaeger-io/
+context: observability
+generated: '2026-11-10'
+concepts:
+  trace:
+    path_segment:
+    - traces
+    - spans
+    properties:
+      metadata: attributes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/jaeger-collector-api-openapi.yml#POST /api/v2/spans
+    - openapi/_original/jaeger-query-api-openapi.yml#GET /api/v3/traces
+    - openapi/_original/jaeger-query-api-openapi.yml#GET /api/v3/traces/{traceId}
+    - openapi/_original/jaeger-query-api-openapi.yml#POST /api/v3/traces

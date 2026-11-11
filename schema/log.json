@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/observability/main/schema/log.json",
+  "title": "Log",
+  "description": "The common log in Observability, distilled from 37 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.297,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "id",
+        "_id",
+        "ID",
+        "ObjectID",
+        "uuid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.27,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "Created",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "timestamp": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.27,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "timestamp",
+        "time",
+        "occurredAt",
+        "timestampMs"
+      ]
+    },
+    "level": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.243,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "level",
+        "severity",
+        "logLevel",
+        "Level"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.243,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "status",
+        "enabled",
+        "state"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "observability",
+    "concept": "log",
+    "providers": 37,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

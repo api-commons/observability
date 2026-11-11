@@ -1,0 +1,18 @@
+provider: apitoolkit
+apis_io: https://apis.io/providers/apitoolkit/
+context: observability
+generated: '2026-11-10'
+concepts:
+  monitor:
+    path_segment:
+    - monitors
+    properties:
+      name: name
+      id: id
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+      interval: interval
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/monoscope-platform-openapi.yml#GET /monitors

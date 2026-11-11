@@ -1,0 +1,14 @@
+provider: opsgenie
+apis_io: https://apis.io/providers/opsgenie/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      created_at: createdAt
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opsgenie-alert-openapi.yml#GET /v2/alerts/{identifier}/logs
+    - openapi/_original/opsgenie-team-openapi.yml#GET /v2/teams/{identifier}/logs

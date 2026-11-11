@@ -1,0 +1,16 @@
+provider: oracle-cloud
+apis_io: https://apis.io/providers/oracle-cloud/
+context: observability
+generated: '2026-11-10'
+concepts:
+  log:
+    path_segment:
+    - logs
+    properties:
+      timestamp: timestamp
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/oracle-cloud-identity-openapi.yaml#GET /iamWorkRequests/{iamWorkRequestId}/logs
+    - openapi/_original/oracle-cloud-identity-openapi.yaml#GET /taggingWorkRequests/{workRequestId}/logs
+    - openapi/_original/oracle-cloud-kubernetes-engine-openapi.yaml#GET /workRequests/{workRequestId}/logs
+    - openapi/_original/oracle-cloud-object-storage-openapi.yaml#GET /workRequests/{workRequestId}/logs
