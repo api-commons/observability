@@ -1,7 +1,7 @@
 provider: thousandeyes
 apis_io: https://apis.io/providers/thousandeyes/
 context: observability
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   monitor:
     path_segment:

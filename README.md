@@ -20,7 +20,7 @@ generated. Every number below is a count of providers.
 | trace | 50 | 42 | trace_id 62%, name 52%, metadata 50% | traces 38, spans 12, trace 11 |
 | slo | 7 | 7 | created_at 100%, name 86%, description 71%, sli 71%, tags 71%, updated_at 71%, id 57% | slos 5, slo 2 |
 
-Cohort: 279 providers with harvested OpenAPI, 104 crosswalks. Of the providers exposing a monitor: 80% create, 96% list, 84% fetch, 66% update, 77% delete. Generated 2026-11-10 by build.py.
+Cohort: 279 providers with harvested OpenAPI, 104 crosswalks. Of the providers exposing a monitor: 80% create, 96% list, 84% fetch, 66% update, 77% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The
@@ -31,6 +31,18 @@ extended tier and the long tail of every concept are in [profile.yml](profile.ym
 - A monitor agrees on name, id, status and type: uptime checks, synthetic tests and metric monitors share the identity of a watcher even where their thresholds differ.
 - An SLO agrees almost completely -- name, description, its indicator, tags and dates -- the newest concept here and the most standardised.
 - Traces agree on a trace id, a name and metadata; logs agree on nothing as a resource. Several are OpenTelemetry payloads whose shape lives in the OTLP standard, and others LLM-observability traces with a different shape again. OTLP deserves its own pass, as Open Banking did.
+- Measured against OTLP, a trace is an OpenTelemetry span: OTLP defines every core property of a trace. Logs have no measured core, and OTLP's LogRecord is the shape the market would converge on if it published one.
+
+## Measured against the standard
+
+The census reads what providers publish. Where the domain has a standard, the standard's own
+definition is read as one more voice: how much of the measured core it defines, and what it
+defines that no provider in the cohort publishes. Crosswalks are in [standards/](standards).
+
+| Standard | Concept | Core defined by the standard | Fields only the standard has |
+| --- | --- | ---: | ---: |
+| [otlp-1](https://github.com/open-telemetry/opentelemetry-proto) | `trace` | 100% | 3 |
+| [otlp-1](https://github.com/open-telemetry/opentelemetry-proto) | `log` | no measured core | 1 |
 
 ## Artifacts
 

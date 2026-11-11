@@ -100,6 +100,7 @@ findings:
     Several are OpenTelemetry payloads whose shape lives in the OTLP standard, and others
     LLM-observability traces with a different shape again. OTLP deserves its own pass, as
     Open Banking did."
+  - "Measured against OTLP, a trace is an OpenTelemetry span: OTLP defines every core property of a trace. Logs have no measured core, and OTLP's LogRecord is the shape the market would converge on if it published one."
 decisions:
   - "Incidents belong to incident management; observability ends at the alert."
   - "A monitor covers checks, uptime checks, synthetics and probes; singular `/check` is an
@@ -109,3 +110,7 @@ decisions:
   - "Metrics count only beneath a query, series or versioned API path; a bare `/metrics` is a
     Prometheus scrape endpoint or a usage counter almost everywhere."
   - "Duplicates merged: Grafana, Honeycomb, Catchpoint."
+
+standards:
+  - standard: otlp-1
+    concepts: {trace: [Span, Status], log: [LogRecord]}

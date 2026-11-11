@@ -1,7 +1,7 @@
 provider: sumo-logic
 apis_io: https://apis.io/providers/sumo-logic/
 context: observability
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   monitor:
     path_segment:

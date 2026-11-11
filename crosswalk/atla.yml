@@ -1,7 +1,7 @@
 provider: atla
 apis_io: https://apis.io/providers/atla/
 context: observability
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   trace:
     path_segment:
